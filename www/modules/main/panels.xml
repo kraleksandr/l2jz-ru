@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panelRoot SYSTEM "../../engine/dtd/panelRoot.dtd">
+<panelRoot>
+	
+	<!-- Login user into system -->
+	<panel name="loginUser" panelType="tpanel" template="mainMenu.loginUser">
+		<onClick>
+			doQuery('engine.user.login',vars);
+			doQuery('engine.changeGS',{'GS':l2jz.GS});
+			menu.draw();
+		</onClick>
+		<fields>
+			<text name="login" maxlength="25" size="20"/>
+			<pass name="pass" maxlength="25" size="20"/>
+			<checkbox name="remember"/>
+		</fields>	
+	</panel>
+	
+	<!-- Exit user from system -->
+	<panel name="exitUser" panelType="button">
+		<onClick>
+			doQuery('engine.user.exit',vars);
+			menu.draw();
+		</onClick>
+		<fields>
+			<hidden name="l2jz_query" value="engine.login.exit"/>
+		</fields>
+	</panel>
+	
+	<!-- Register new user -->
+    <panel name="registerUser" panelType="tpanel" template="registerUser">
+        <onClick>
+            doQuery('engine.user.register',vars);
+            menu.draw();
+        </onClick>
+        <fields>
+            <text name="login" maxlength="25" minlength="2" size="20"/>
+            <pass name="pass" maxlength="25" minlength="8"  size="20" equal="pass_again"/>
+            <pass name="pass_again" maxlength="25" size="20"/>
+            <text name="email" maxlength="60" size="20" email="email"/>
+        </fields>
+    </panel>
+    
+    <!-- Getting forgotting pass by email -->
+    <panel name="getPassByMail" panelType="tpanel" template="getPassByMail">
+		<onClick>
+            doQuery('engine.user.getPassByMail',vars);
+        </onClick>
+        <fields>
+            <text name="login" maxlength="25" size="16"/>
+            <text name="email" maxlength="60" size="16" email="true"/>
+        </fields>
+    </panel>
+	
+	<!-- Change language -->
+	<panel name="changeLanguage" panelType="lpanel" hasButton="FALSE">
+		<onAny>
+			doQuery('engine.languageLoader',vars);
+			l2jz.language = vars.languageName;
+		</onAny>
+		<fields>
+			<select name="languageName">
+				<optionMaker>
+					for(var i in l2jz.config.languages){
+						var lngName = l2jz.config.languages[i];
+						optionArray[lngName] = html.h('etc.languages.'+lngName);
+					}
+					defaultOption = l2jz.language;
+				</optionMaker>
+			</select>
+		</fields>    
+	</panel>
+	
+	<!-- Change Game Server -->
+	<panel name="changeGS" panelType="lpanel" hasButton="FALSE">
+		<onAny>
+			doQuery('engine.changeGS',vars);
+			l2jz.GS = vars.GS;
+			menu.draw();
+		</onAny>
+		<fields>
+			<select name="GS">
+				<optionMaker>
+					for(var i in l2jz.config.gServers){
+						optionArray[i] = l2jz.config.gServers[i];
+					}
+					defaultOption = l2jz.GS;
+				</optionMaker>
+			</select>
+		</fields>    
+	</panel>
+	
+	<section name="mainMenu">
+		<!-- Search panel for main menu -->
+		<panel name="search" panelType="tpanel" template="mainMenu.menuSearch" onChangeT="500">
+			<onAny>
+				doLoad(vars.l2jz_query+'.'+vars.id);
+			</onAny>
+			<fields>
+				<hidden name="l2jz_query"/>
+				<text name="id" minlength="2" maxlength="50" size="11"/>
+				<image name="button" src="./i/arr1.gif" width="9" height="9"/>
+			</fields>
+		</panel>
+	</section>
+	
+	
+	
+
+	<!-- ENGINE -->
+	<section name="engine">
+		<!-- Compile l2jz button -->
+		<panel name="compileL2JZ" panelType="button">
+			<onAny>
+				doQuery('engine.compileL2JZ',vars);
+				html.setSection('adminSection',r);
+			</onAny>
+		</panel>
+	</section>
+</panelRoot>

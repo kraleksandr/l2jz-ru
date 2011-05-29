@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languageRoot SYSTEM "../../../engine/dtd/languageRoot.dtd">
+<languageRoot>
+    <h name="page.clan">
+        <h name="main.linkName" value="Members"/>
+        <h name="warehouse.linkName" value="Warehouse"/>
+    </h>
+</languageRoot>

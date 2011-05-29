@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE queryRoot SYSTEM "../../engine/dtd/queryRoot.dtd">
+<queryRoot>
+	<!-- ACCOUNT -->
+	<section name="account" access="10">
+		<query name="main" sAccess="myAccount">
+			<variable name="login" type="none"/>
+		</query>
+		<query name="chars" sAccess="myAccount">
+			<variable name="login" type="none"/>
+		</query>
+		<section name="action" saveJS="account.main" saveMode="+">
+			<query name="moveCharToAccount" access="100">
+				<variable name="login" type="login"/>
+				<variable name="char_name" type="none"/>
+			</query>
+			<query name="changePass" access="100">
+				<variable name="login" type="login"/>
+				<variable name="newPass" type="newPass"/>
+			</query>
+			<query name="changeMyPass" access="0">
+				<variable name="login" type="login"/>
+				<variable name="pass" type="pass"/>
+				<variable name="newPass" type="newPass"/>
+			</query>
+			<query name="changeAccess" access="100">
+				<variable name="login" type="login"/>
+				<variable name="builder" type="numeric"/>
+			</query>
+			<query name="changeEmail" access="100" sAccess="myAccount">
+				<variable name="login" type="login"/>
+				<variable name="email" type="email"/>
+			</query>
+			<query name="ban" access="100">
+				<variable name="login" type="login"/>
+			</query>
+			<query name="unban" access="100">
+				<variable name="login" type="login"/>
+			</query>
+		</section>
+	</section>
+</queryRoot>

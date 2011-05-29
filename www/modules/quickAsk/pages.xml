@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pageRoot SYSTEM "../../engine/dtd/pageRoot.dtd">
+<pageRoot>
+    <!-- QUICK ASK -->
+    <section name="quickAsk" frame="quickAsk" arguments="id">
+        <page name="char">
+            doQuery('quickAsk.char',vars);
+            new l2jzTable('char.entity',{tplName:'quickAsk.char',div:'quick_search_section'});
+        </page>
+        <page name="item">
+            doQuery('quickAsk.item',vars);
+            new l2jzTable('items.entity',{tplName:'quickAsk.item',div:'quick_search_section'});
+        </page>
+        <page name="mob">
+            doQuery('quickAsk.mob',vars);
+            new l2jzTable('monster.entity',{tplName:'quickAsk.mob',div:'quick_search_section'});
+        </page>
+    </section>
+</pageRoot>

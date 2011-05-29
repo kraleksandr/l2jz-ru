@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE queryRoot SYSTEM "../../engine/dtd/queryRoot.dtd">
+<queryRoot>
+	<!-- SERVER -->
+	<section name="server">
+		<query name="main" cache="3600"/>
+		<section name="action">
+			<query name="setAnnouncement" access="100">
+				<variable name="announce" type="none"/>
+			</query>
+		</section>
+	</section>
+</queryRoot>

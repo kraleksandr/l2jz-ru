@@ -1,0 +1,12 @@
+<!--
+-->
+<!ELEMENT languageRoot (h)*>
+<!ATTLIST languageRoot
+  name    CDATA #IMPLIED
+>
+
+<!ELEMENT h (#PCDATA|h)*>
+<!ATTLIST h
+  name    CDATA #REQUIRED
+  value   CDATA #IMPLIED
+>

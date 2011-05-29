@@ -1,0 +1,25 @@
+<div class="mapContainer">
+	<div id="smallMapContainer">
+		<div id="smallMap"></div>
+		<div id="map_pointer"></div>
+		<div id="smallMapField"
+			onMouseUp="map.onPointerMouseUp()"
+			onMouseOut="map.onPointerMouseUp()"
+		></div>
+	</div>
+	
+	<div id="bigMapContainer">
+		<div id="bigMap"></div>
+	</div>
+	
+	<div class="mapPanel">
+		<table>
+			<tr>
+				<td><div id="mapSpawnsCounter"></div></td>
+				<td>@:html.a2('map.chars_online',{'class':'bigPageName'}):@</td>
+				<td width="100%"></td>
+				<td>@:html.aButton('map.hide','Hide'):@</td>
+			</tr>
+		</table>
+	</div>
+</div>

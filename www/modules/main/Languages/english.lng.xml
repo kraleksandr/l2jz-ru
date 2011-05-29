@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languageRoot SYSTEM "../../../engine/dtd/languageRoot.dtd">
+<languageRoot>
+	<h name="page">
+		<h name="default.linkName" value=" "/>
+		 <h name="info">
+			<h name="welcome.linkName" value="Welcome"/>
+			<h name="register_user"/>
+			<h name="forgot_password"/>
+		</h>
+		<h name="chars">
+			<h name="search">
+				<h name="pageTitle" value="Search: @:a.vars.id:@"/>
+			</h>
+			<h name="builders">
+				<h name="linkName" value="Builders"/>
+				<h name="pageTitle" value="Builders"/>
+			</h>
+			<h name="online">
+				<h name="linkName" value="Online"/>
+				<h name="pageTitle" value="Players Online"/>
+			</h>
+			<h name="top100">
+				<h name="linkName" value="Top 100"/>
+				<h name="pageTitle" value="Top 100"/>
+			</h>
+			<h name="top100adena">
+				<h name="linkName" value="Top 100 Adena"/>
+				<h name="pageTitle" value="Top 100 Adena"/>
+			</h>
+		</h>
+		<h name="accounts">
+			<h name="all">
+				<h name="linkName" value="All"/>
+				<h name="pageTitle" value="All accounts of the server."/>
+			</h>
+			<h name="builders" value="Builders">
+				<h name="linkName" value="Builders"/>
+				<h name="pageTitle" value="Builders"/>
+			</h>
+			<h name="search.pageTitle" value="Search: @:a.vars.id:@"/>
+		</h>
+		<h name="clans">
+			<h name="all_clans">
+				<h name="linkName" value="Clans"/>
+				<h name="pageTitle" value="Clans"/>
+			</h>
+			<h name="search.pageTitle" value="Search: @:a.vars.id:@"/>
+		</h>
+		<h name="items">
+			<h name="type">
+				<h name="pageTitle" value="@:a.linkName:@"/>
+				<!-- ARMOR -->
+				<h name="chest.linkName" value="Upper Body"/>
+				<h name="legs.linkName" value="Lower Body"/>
+				<h name="fullbody.linkName" value="Full Body"/>
+				<h name="feet.linkName" value="Boots"/>
+				<h name="gloves.linkName" value="Gloves"/>
+				<h name="head.linkName" value="Helmets"/>
+				<h name="shield.linkName" value="Shields"/>
+				<h name="underwear.linkName" value="Underwear"/>
+				<h name="back.linkName" value="Back"/>
+				<h name="pet_armor.linkName" value="Pet Armor"/>
+				<!-- ACCESSORIE -->
+				<h name="ear.linkName" value="Earrings"/>
+				<h name="finger.linkName" value="Rings"/>
+				<h name="neck.linkName" value="Necklaces"/>
+				<!-- WEAPON -->
+				<h name="sword.linkName" value="Swords"/>
+				<h name="bow.linkName" value="Bows"/>
+				<h name="blunt.linkName" value="Blunts"/>
+				<h name="dagger.linkName" value="Daggers"/>
+				<h name="pole.linkName" value="Polearms"/>
+				<h name="etc.linkName" value="Books"/>
+				<h name="dualfist.linkName" value="Dual Fists"/>
+				<h name="dual.linkName" value="Dual Swords"/>
+				<h name="pet_weapon.linkName" value="Pet Weapon"/>
+				<!-- ETC -->
+				<h name="arrow.linkName" value="Arrows"/>
+				<h name="potion.linkName" value="Potions"/>
+				<h name="pet_collar.linkName" value="Pet collars"/>
+				<h name="material.linkName" value="Materials"/>
+				<h name="castle_guard.linkName" value="Castle guards"/>
+				<h name="scroll.linkName" value="Scrolls"/>
+				<h name="quest.linkName" value="Quest items"/>
+				<h name="soulshots.linkName" value="Soulshots"/>
+				<h name="spellbook.linkName" value="Spellbooks"/>
+				<h name="dye.linkName" value="Dyes"/>
+				<h name="seed.linkName" value="Seeds"/>
+				<h name="tattoo.linkName" value="Tattoo"/>
+				<h name="fishbait.linkName" value="Fishbaits"/>
+				<h name="none.linkName" value="None"/>
+			</h>
+			<h name="recipe">
+				<h name="linkName" value="Level @:a.id:@"/>
+				<h name="pageTitle" value="Recipes: @:a.vars.id:@ level"/>
+			</h>
+			<h name="sets">
+				<h name="pageTitle" value="@:a.linkName:@ Sets"/>
+				<h name="0.linkName" value="No Grade"/>
+				<h name="1.linkName" value="D Grade"/>
+				<h name="2.linkName" value="C Grade"/>
+				<h name="3.linkName" value="B Grade"/>
+				<h name="4.linkName" value="A Grade"/>
+			</h>
+			<h name="luxor">
+				<h name="linkName" value="Luxor"/>
+				<h name="pageTitle" value="Luxor shop"/>
+			</h>
+			<h name="search.pageTitle" value="Search: @:a.vars.id:@"/>
+		</h>
+		<h name="monsters">
+			<h name="type">
+				<h name="pageTitle" value="@:a.linkName:@"/>
+				<h name="01_10.linkName" value="1 ~ 10"/>
+				<h name="11_20.linkName" value="11 ~ 20"/>
+				<h name="21_30.linkName" value="21 ~ 30"/>
+				<h name="31_40.linkName" value="31 ~ 40"/>
+				<h name="41_50.linkName" value="41 ~ 50"/>
+				<h name="51_60.linkName" value="51 ~ 60"/>
+				<h name="61_70.linkName" value="61 ~ 70"/>
+				<h name="71_80.linkName" value="71 ~ 80"/>
+				<h name="81_90.linkName" value="81 ~ 90"/>
+				<h name="undead.linkName" value="Undeads"/>
+				<h name="npc.linkName" value="Npc"/>
+				<h name="merchant.linkName" value="Merchants"/>
+				<h name="warehouse.linkName" value="Warehouse"/>
+				<h name="teleporter.linkName" value="Teleporters"/>
+				<h name="guard.linkName" value="Guards"/>
+				<h name="raidboss.linkName" value="Raid Boss"/>
+			</h>
+			<h name="search.pageTitle" value="Search: @:a.vars.id:@"/>
+		</h>
+		<h name="top_menu">
+			<h name="chars.linkName" value="Chars"/>
+			<h name="accounts.linkName" value="Accounts"/>
+			<h name="items" value="Items">
+				<h name="armor.linkName" value="Armor"/>
+				<h name="weapon.linkName" value="Weapon"/>
+				<h name="accessories.linkName" value="Accessorie"/>
+				<h name="recipes.linkName" value="Recipes"/>
+				<h name="others.linkName" value="Other"/>
+				<h name="sets.linkName" value="Sets"/>
+				<h name="luxor.linkName" value="Luxor"/>
+			</h>
+			<h name="monsters.linkName" value="Monsters"/>
+		</h>
+	</h>
+	<h name="query">
+		<h name="default">
+			<h name="no_access" value="Access denied for query @:a.vars.l2jz_query:@."/>
+			<h name="empty" value="Empty."/>
+			<h name="ok" value=" "/>
+		</h>
+		<h name="engine">
+			<h name="languageLoader">
+				<h name="ok" value="@:html.h('etc.languages.'+a.vars.languageName):@ language was loaded."></h>
+				<h name="error:wrongLanguage" value="Invalid language name: @:a.vars.languageName:@."/>
+			</h>
+			<h name="changeGS">
+				<h name="error:noSuchGS" value="No such Game Server: @:a.vars.GS:@."/>
+			</h>
+			<h name="user">
+				<h name="login">
+					<h name="ok:userLogin" value="Welcome @:a.r.login:@. Your access level is @:a.r.builder:@."/>
+					<h name="ok:guestLogin" value="Welcome guest."/>
+					<h name="error:incorrectPass" value="Incorrect login or password."/>
+				</h>
+				<h name="getPassByMail">
+					<h name="error:wrongLoginOrEmail" value="Invalid login or email."/>
+					<h name="error:errorSendingMail" value="Error sending mail."/>
+					<h name="ok" value="Password was successfully changed."/>
+				</h>
+			</h>
+		</h>
+		<h name="chars">
+			<h name="default">
+				<h name="empty" value="No chars."/>
+			</h>
+		</h>
+	</h>
+	<h name="table">
+		<h name="sys">
+			<h name="filter">
+				<h name="showAll" value="All"/>
+				<h name="min_level" value="By Level">
+					<h name="default" value="@:a.value:@"/>
+				</h>
+				<h name="recipe_level" value="By Level">
+					<h name="default" value="@:a.value:@"/>
+				</h>
+				<h name="bodypart" value="By Type">
+					<h name="heavy" value="Heavy"/>
+					<h name="light" value="Light"/>
+					<h name="magic" value="Magic"/>
+					<h name="lrhand" value="Two Hand"/>
+					<h name="rhand" value="One Hand"/>
+					<h name="hatchling" value="Hatchling"/>
+					<h name="wolf" value="Wolf"/>
+					<h name="strider" value="Strider"/>
+				</h>
+				<h name="gtype" value="By Type">
+					<h name="0" value="Armor"/>
+					<h name="1" value="Accessorie"/>
+					<h name="2" value="Weapon"/>
+					<h name="3" value="Shield"/>
+					<h name="9" value="Other Items"/>
+				</h>
+				<h name="crystal_type" value="By Grade">
+					<h name="0" value="No Grade"/>
+					<h name="1" value="D Grade"/>
+					<h name="2" value="C Grade"/>
+					<h name="3" value="B Grade"/>
+					<h name="4" value="A Grade"/>
+				</h>
+				<h name="loc" value="By Location">
+					<h name="PAPERDOLL" value="Equipped"/>
+					<h name="INVENTORY" value="Inventory"/>
+					<h name="WAREHOUSE" value="Warehouse"/>
+					<h name="CLANWH" value="Clan Storage"/>
+				</h>
+				<h name="class_index" value="By Class">
+					<h name="default" value="@:html.h('page.skills.class.'+a.value):@"/>
+				</h>
+				<h name="ally_name" value="NO_JUMP_PANEL">
+					<h name="default" value="@:a.value:@"/>
+					<h name="L2JZ_NULL" value="No alliance."/>
+				</h>
+				<h name="set_id" value="NO_JUMP_PANEL">
+					<h name="default" value="@:a.row.set_name:@"/>
+				</h>
+				<h name="sweep" value="Sweep">
+					<h name="0" value="Drop"/>
+					<h name="1" value="Spoil"/>
+				</h>
+			</h>
+		</h>
+		<h name="default">
+			<h name="chance" value="Chance"/>
+			<h name="exp" value="Exp"/>
+			<h name="icon" value=" "/>
+			<h name="level" value="Lvl"/>
+			<h name="name" value="Name"/>
+			<h name="price" value="Price"/>
+			<h name="sex" value="Sex"/>
+			<h name="sp" value="SP"/>
+			<h name="rowCounter" value="#"/>
+		</h>
+		<h name="char">
+			<h name="location" value=" "/>
+			<h name="account_name" value="Account"/>
+			<h name="acc" value="Accuracy"/>
+			<h name="accesslevel" value="Access"/>
+			<h name="adena_count" value="Adena"/>
+			<h name="a_c_spd" value="A.Spd/C.Spd"/>
+			<h name="char_name" value="Name"/>
+			<h name="clan_name" value="Clan"/>
+			<h name="class_id" value="Class"/>
+			<h name="crit" value="Critical"/>
+			<h name="maxHp" value="HP/MAX HP"/>
+			<h name="maxMp" value="MP/MAX MP"/>
+			<h name="item_count" value="Count"/>
+			<h name="kickCharPanel" value=" "/>
+			<h name="loc" value="Location"/>
+			<h name="p_m_atk" value="P.atk/M.atk"/>
+			<h name="p_m_def" value="P.def/M.def"/>
+			<h name="pvpkills" value="PvP/PK"/>
+			<h name="online" value="Status"/>
+			<h name="onlinetime" value="Play Time"/>
+		</h>
+		<h name="account">
+			<h name="login" value="Login"/>
+			<h name="lastactive" value="Last Active"/>
+			<h name="access_level" value="Access"/>
+			<h name="lastIP" value="Last IP"/>
+			<h name="email" value="Email"/>
+		</h>
+		<h name="clan">
+			<h name="location" value=" "/>
+			<h name="clan_name" value="Name"/>
+			<h name="clan_level" value="Lvl"/>
+			<h name="clan_lider" value="Leader"/>
+			<h name="ally_name" value="Alliance"/>
+			<h name="level_sum" value="Average level"/>
+			<h name="clan_count" value="Member count"/>
+		</h>
+		<h name="items">
+			<h name="type" value="Type"/>
+			<h name="crystal_type" value="Grade"/>
+			<h name="p_def" value="P.def"/>
+			<h name="m_def" value="M.def"/>
+			<h name="p_dam" value="P/M.atk"/>
+			<h name="soulshots" value="SS/SpS/MP"/>
+			<h name="atk_speed" value="Speed"/>
+			<h name="shield_def_rate" value="Defense"/>
+			<h name="avoid_modify" value="Evasion"/>
+			<h name="mp_bonus" value="MP"/>
+			<h name="weight" value="Weight"/>
+			<h name="deleteItemPanel" value=" "/>
+			<h name="itemPanel" value=" "/>
+			<h name="delete_from_shop" value=" "/>
+			<h name="drop_panel" value=" "/>
+			<h name="shop_id" value=" "/>
+			<h name="count" value="Count"/>
+			<h name="world_count" value="Total in world"/>
+			<h name="owners" value="Owners Count"/>
+			<h name="loc" value="Location"/>
+			<h name="char_name" value="Owner"/>
+			<h name="merchant_area_name" value="Location"/>
+			<h name="d_count" value="@@CDATA@@"><![CDATA[<img width="11" border="1" style="border-color:black;" src="i/grade_1.gif">]]></h>
+			<h name="c_count" value="@@CDATA@@"><![CDATA[<img width="11" border="1" style="border-color:black;" src="i/grade_2.gif">]]></h>
+		</h>
+		<h name="monster">
+			<h name="mob_id" value=" "/>
+			<h name="type" value="Type"/>
+			<h name="aggro" value="Agr"/>
+			<h name="hp" value="HP/MP"/>
+			<h name="p_m_atk" value="P/M.atk"/>
+			<h name="p_m_def" value="P/M.def"/>
+			<h name="p_m_spd" value="P/M.AtkSpd"/>
+			<h name="p_m_walkrun" value="Walk/Run"/>
+			<h name="r_l_hand" value="Right Hand / Left Hand"/>
+			<h name="attackrange" value="Range"/>
+			<h name="merchant_area_name" value="Location"/>
+			<h name="count" value="Spawns"/>
+			<h name="amount" value="Amount"/>
+			<h name="amount_min" value="Min."/>
+			<h name="amount_max" value="Max."/>
+			<h name="map_flag" value=" "/>
+			<h name="respawn_delay" value="Resp. time"/>
+		</h>
+		<h name="skill">
+			<h name="deleteSkillPanel" value=" "/>
+			<h name="mp_consume" value="@@CDATA@@"><![CDATA[MP/HP<br>Range]]></h>
+			<h name="setSkillLevelPanel" value="Skill\nLevel"/>
+		</h>
+	</h>
+	<h name="panel">
+		<h name="default">
+			<h name="builder" value="Builder"/>
+			<h name="button" value="Set"/>
+			<h name="email" value="Email"/>
+			<h name="item_id" value="Item ID"/>
+			<h name="login" value="Login"/>
+			<h name="equalError" value="The entered @:a.fName:@s are not identical."/>
+			<h name="minlengthError" value="@:a.fName:@ has to be at least @:a.attrValue:@ charaters."/>
+			<h name="emailError" value="Email address is not valid."/>
+		</h>
+		<h name="main">
+			<h name="loginUser">
+				<h name="pass" value="Pass"/>
+				<h name="remember" value="Remember"/>
+				<h name="button" value="Enter"/>
+			</h>
+			
+			<h name="registerUser" value="Register\nNew User">
+				<h name="pass" value="Password"/>
+				<h name="pass_again" value="Pass again"/>
+				<h name="button" value="Register"/>
+			</h>
+			<h name="getPassByMail" value="Generate\nNew Password">
+				<h name="button" value="Generate"/>
+			</h>
+			<h name="exitUser">
+				<h name="button" value="Exit"/>
+			</h>
+			
+			<h name="engine">
+				<h name="compileL2JZ">
+					<h name="button" value="Compile L2JZ"/>
+				</h>
+			</h>
+		</h> 
+	</h>
+	<h name="etc">
+		<h name="itemLoc">
+			<h name="PAPERDOLL" value="@@CDATA@@"><![CDATA[<font size="-2" color="#347614">Equipped</font>]]></h>
+			<h name="INVENTORY" value="@@CDATA@@"><![CDATA[<font size="-2" color="#B73C00">Inventory</font>]]></h>
+			<h name="WAREHOUSE" value="@@CDATA@@"><![CDATA[<font size="-2" color="#8B7E0E">Warehouse</font>]]></h>
+			<h name="CLANWH" value="@@CDATA@@"><![CDATA[<font size="-2" color="#8B7E0E">Clan Storage</font>]]></h>
+		</h>
+		<h name="charStatus">
+			<h name="online" value="@@CDATA@@"><![CDATA[<font color="green">Online</font>]]></h>
+			<h name="offline" value="@@CDATA@@"><![CDATA[<font color="#B73C00">Offline</font>]]></h>
+		</h>
+		<h name="mobStatus">
+			<h name="aggro" value="@@CDATA@@"><![CDATA[<font color="#B73C00">A</font>]]></h>
+			<h name="pssiv" value="@@CDATA@@"><![CDATA[<font color="green">P</font>]]></h>
+		</h>
+		<h name="mapStatus">
+			<h name="loc" value="@@CDATA@@"><![CDATA[<img src="i/locate.gif" width="14" border="0">]]></h>
+			<h name="noloc" value="@@CDATA@@"><![CDATA[<img src="i/no_locate.gif" width="14" border="0">]]></h>
+		</h>
+		<h name="month">
+			<h name="0" value="Jan"/>
+			<h name="1" value="Feb"/>
+			<h name="2" value="Mar"/>
+			<h name="3" value="Apr"/>
+			<h name="4" value="May"/>
+			<h name="5" value="Jun"/>
+			<h name="6" value="Jul"/>
+			<h name="7" value="Aug"/>
+			<h name="8" value="Sep"/>
+			<h name="9" value="Oct"/>
+			<h name="10" value="Nov"/>
+			<h name="11" value="Dec"/>
+		</h>
+		<h name="languages">
+			<h name="english" value="English"/>
+			<h name="russian" value="Русский"/>
+		</h>
+	</h>
+</languageRoot>

@@ -1,0 +1,66 @@
+<table width="569" height="225" style="BACKGROUND: url(./modules/sevensigns/i/ssqViewBg.jpg)">
+	<tr valign="top">
+		<td>
+			<table style="MARGIN: 18px 0px 0px 54px" cellspacing="0" cellpadding="0" border="0" width="141">
+				<tr align="center" height="26">
+					<td style="BACKGROUND: url(./modules/sevensigns/i/ssqViewimg1.gif); COLOR:#fff; font-size:11px;">
+					@:
+						(a.period>3)? html.h('table.sevensigns.-1')
+						:             html.tSys(html.h('table.sevensigns.'+a.period),a.nthDay)
+					:@
+					</td>
+				</tr>
+			</table>
+			<table style="MARGIN: 3px 0px 0px 10px" cellspacing="0" cellpadding="0" width="141" border="0">
+				<tr>
+					<td></td>
+					<td><img height="16" src="./modules/sevensigns/i/timeBox1.jpg" width="140" border="0"></td>
+					<td></td>
+				</tr><tr>
+					<td valign="bottom" rowspan="2"><img height="125" src="./modules/sevensigns/i/timeBox2.jpg" width="45" border="0"></td>
+					<td><img src="./modules/sevensigns/i/time/time@:(a.period>1?(Number(a.nthDay)+7):a.nthDay):@.jpg" width="140" height="139" border="0"></td>
+					<td valign="bottom" rowspan="2"><img height="125" src="./modules/sevensigns/i/timeBox3.jpg" width="66" border="0"></td>
+				</tr><tr>
+					<td><img height="12" src="./modules/sevensigns/i/timeBox4.jpg" width="140" border="0"></td>
+				</tr>
+			</table>
+		</td><td>
+			<table style="MARGIN: 18px 0px 0px 64px" cellspacing="0" cellpadding="0" width="141" border="0">
+				<tr align="center" height="26">
+					<!-- Current Time - Not Real Time but the time of query -->
+					<td style="BACKGROUND: url(./modules/sevensigns/i/ssqViewimg1.gif); COLOR:#fff; font-size:11px">@:a.ss_time:@</td>
+				</tr>
+			</table>
+			<table style="MARGIN: 21px 0px 0px 22px" cellspacing="0" cellpadding="0" width="220" border="0">
+				<COLGROUP align="left">
+				<COL width="48">
+				<COL width="*">
+				<tr height="11"><!--Dawn Bar Graph-->
+					<td width="32" style="font-size:11px; color:#000">Dawn</td>
+					<td width="188" valign="top">
+						<div style="position:absolute; z-index:3"><img src="./modules/sevensigns/i/ssqbar2.gif" width="@:((a.dawn_score*210)/(Number(a.dawn_score)>Number(a.dusk_score)?a.dawn_score:a.dusk_score)):@" height="15" border="0"></div>
+						<div style="position:absolute;z-index:3;font-size:11px;color:#000;MARGIN: 0px 0px 0px 5px">@:a.dawn_score:@</div>
+					</td>
+				</tr>
+				<tr><td colspan="2" height="7"></td></tr>
+				<tr height="11"><!--Dusk Bar Graph-->
+					<td width="32" style="font-size:11px; color:#000">Dusk</td>
+					<td width="188" valign="top">
+						<div style="position:absolute;z-index:3"><img src="./modules/sevensigns/i/ssqbar1.gif" width="@:((a.dusk_score*210)/(Number(a.dawn_score)>Number(a.dusk_score)?a.dawn_score:a.dusk_score)):@" height="15" border="0"></div>
+						<div style="position:absolute;z-index:3;font-size:11px;color:#000;MARGIN: 0px 0px 0px 5px">@:a.dusk_score:@</div>
+					</td>
+				</tr></COLGROUP>
+			</table>
+			<table cellspacing="0" cellpadding="0" border="0">
+				<!-- It not 3 then seal must be shown as grey.Seal Status 0 = closed, 1 or 2 = opened  -->
+				<tr valign="bottom" align="center" height="95"><!--Seals-->
+					<td><img src="./modules/sevensigns/i/Seals/SOA/bongin1@:(a.period==3?((a.avarice==0)?'close':'open'):''):@.gif" width="85" height="86" border="0"></td>
+					<td><img src="./modules/sevensigns/i/Seals/SOG/bongin2@:(a.period==3?((a.gnosis==0)?'close':'open'):''):@.gif" width="85" height="86" border="0"></td>
+					<td><img src="./modules/sevensigns/i/Seals/SOS/bongin3@:(a.period==3?((a.strife==0)?'close':'open'):''):@.gif" width="85" height="86" border="0"></td>
+				</tr><tr>
+					<td colspan="3"><div align="center" style="margin-left:10px;"><img height="16" src="./modules/sevensigns/i/bonginName.gif" width="258" border="0"></div></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>

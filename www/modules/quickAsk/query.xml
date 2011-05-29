@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE queryRoot SYSTEM "../../engine/dtd/queryRoot.dtd">
+<queryRoot>
+    <!-- QUICK ASK -->
+    <section name="quickAsk" saveJS="quickAsk">
+        <variable name="id" type="string" minlength="2"/>
+        <query name="char"/>
+        <query name="item"/>
+        <query name="mob"/>
+    </section>
+</queryRoot>

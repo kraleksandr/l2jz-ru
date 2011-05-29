@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languageRoot SYSTEM "../../../engine/dtd/languageRoot.dtd">
+<languageRoot>
+	<h name="query">
+		<h name="quickAsk">
+            <h name="search">
+                <h name="char">
+                    <h name="empty" value="No such char."/>
+                </h>
+                <h name="item">
+                    <h name="empty" value="No such item."/>
+                </h>
+                <h name="mob">
+                    <h name="empty" value="No such mob."/>
+                </h>
+            </h>
+        </h>
+	</h>
+</languageRoot>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE queryRoot SYSTEM "../../engine/dtd/queryRoot.dtd">
+<queryRoot>
+    <!-- ITEM -->
+    <section name="item">
+        <variable name="id" type="none"/>
+        <query name="main" cache="3600"/>
+        <query name="drop"/>
+        <query name="sell"/>
+        <query name="recipe"/>	
+        <query name="owners" access="30"/>	
+    </section>
+    
+    <!-- MONSTER -->
+    <section name="monster">
+        <variable name="id" type="none"/>
+        <query name="main"/>	
+        <query name="drop"/>	
+        <query name="sell"/>
+        <query name="skills"/>
+        <query name="minions"/>	
+    </section>
+</queryRoot>

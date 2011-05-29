@@ -1,0 +1,318 @@
+/* ќбнул€ем все отступы */
+* {margin:0;padding:0;border:0;}
+
+body {
+	background-color: #263C53;
+	color:#94999F;
+	position:inherit
+}
+
+td {
+	font-family: Georgia;
+	font-size: 12px;
+	color: #94999F;
+}
+
+a {
+	font-family: Georgia;
+	font-weight: normal;
+	color:#9D9C95;
+	text-decoration: underline;
+}
+
+a:hover {
+	font-family: Georgia;
+	color:#82878D;
+	text-decoration: none;
+}
+
+a.bigPageName {}
+a.bigPageName .aName {font-family:Georgia;font-size:14px;font-weight:bold;color:#D49019;}
+
+
+.abutton {
+	background-color: #213E43;
+	border:1px solid #636563;
+	padding:2px;
+	font-size: 11px;
+	white-space:nowrap;
+}
+.abutton:hover {
+	background-color: #234735
+}
+.abutton a {
+	text-decoration:none
+}
+
+.tooltipSection {
+	border: 1px solid #636563;
+	background-color: #1E3247;
+	padding:3px;
+}
+
+#topMenuSection .menu {
+	border: 1px solid #636563;
+	width:100%;
+	padding:2px;
+	background-color: #1E3247
+}
+
+#topMenuSection a {
+	font-size: 11px
+}
+
+#pageTitleSection {font-size: 14px;font-weight: bold;color:#D49019;}
+
+
+#navigationSection {width:100%;margin:5px 3px 0px 3px;padding-right:3px;}
+
+#mainMenuSection {width:165px;position:absolute;left:3px;top:31px;}
+#mainMenuSection .aLink .aName {font-family:Georgia;font-size:10px;}
+#mainMenuSection .menuItem {width:100%;background-color:#1E3247;margin-bottom:1px;height:25px;}
+#mainMenuSection .menuItem .leftPart {padding-left:5px;}
+#mainMenuSection .menuItem .rightPart {width:70px;}
+
+#l2jz_message {border:1px solid #636563;background-color:#2B4056;}
+
+#centralSection {position:absolute; left:172px; top:33px;}
+
+/* ќбычные таблицы */
+.standardTable {border: 1px solid #636563;}
+.standardTable thead {background-color:#1E3247;white-space:nowrap;text-align:center;cursor:pointer;cursor:hand;}
+.standardTable tbody {background-color:#324A63;text-align:center;}
+.standardTable td    {padding:2px 2px 2px 2px;}
+.tableJumpPanelName  {font-size:11px;font-weight:bold;color:#D49019;}
+
+.tableFiltersPanel {padding-top:15px;}
+.tableFiltersPanel li {display:inline;}
+.tableFiltersPanel a  {
+	background-color:#213E43;
+	border:1px solid #636563;
+	font-weight:bold;
+	font-size:15px;
+	text-decoration:none;
+	padding:5px;
+	margin:2px;
+}
+.tableFiltersPanel a.active{padding:6px;background-color:#1E3247;color:#D49019;font-size:16px;}
+
+
+/* “аблицы отображающие еденичные сущности(чара, вещь, монстра и.т.д.)*/
+.entityTable {border: 1px solid #636563;text-align:center;}
+.entityTable .entityName {font-family:Georgia;font-size:14px;font-weight:bold;color:#D49019;}
+.entityTable .headTr {background-color: #1E3247;white-space:nowrap;}
+.entityTable .bodyTr {background-color: #324A63;}
+.entityTable .sectionsPanel {
+	border:1px solid #636563;
+	background-color:#1E3247;
+	white-space:nowrap;
+	text-align:left;
+}
+.entityTable .sectionsPanel .aLink .aName {font-family:Georgia;font-size:14px;font-weight:bold;color:#D49019;}
+.entityTable td {padding:2px 2px 2px 2px;}
+
+/* —ѕ≈÷»јЋ№Ќџ≈ —“»Ћ» ќ“ƒ≈Ћ№Ќџ’ я„≈≈  “јЅЋ»÷ */
+/* ќЅў»≈ */
+.table tbody .icon           {background-color:#263C53;}
+.table tbody .icon img       {border:1px solid #636563;}
+.table thead .icon           {width:32;}
+.table tbody .chance .low    {color:#FF6A6A;}
+.table tbody .chance .medium {color:#8888FF;}
+.table tbody .chance .high   {color:green;}
+.table tbody .chance .digit  {font-size:10px;}
+.table thead .name           {width:100%}
+.table tbody .name           {text-align:left;width:100%}
+
+/* CHAR */
+.table thead.char .char_name {width:100%;}
+.table tbody.char .char_name {text-align:left;width:100%;}
+.table tbody.char .clan_name {white-space:nowrap;}
+.table tbody.char .maxHp     {color:#B73C00;}
+.table tbody.char .maxMp     {color:#8888FF;}
+.table tbody.char .class_id  {white-space:nowrap;}
+
+/* ACCOUNT */
+.table thead.account .login  {width:100%;}
+.table tbody.account .login  {text-align:left;width:100%;}
+.table tbody.account .lastactive {white-space:nowrap}
+
+/* CLAN */
+.table thead.clan .clan_name {width:100%;}
+.table tbody.clan .clan_name {text-align:left;width:100%;}
+
+/* ITEM */
+.table tbody.items .name .drop             {font-size:9px;color:#008000;}
+.table tbody.items .name .shop             {font-size:9px;color:#A3A471;}
+.table tbody.items .name .recipe           {font-size:9px;color:#AC7168;}
+.table tbody.items .name .enchant          {font-size:9px;color:#597ABF;font-weight:bold;}
+.table tbody.items .name .description      {font-size:10px; white-space:normal;}
+.table tbody.items .mp_bonus               {color:#8888FF;}
+.table tbody.items .soulshots .x           {font-size:9px;}
+.table tbody.items .soulshots .soulshots   {color:green;}
+.table tbody.items .soulshots .spiritshots {color:#993300;}
+.table tbody.items .soulshots .mp_consume  {color:#8888FF;}
+
+/* MONSTER */
+.table thead.monster .name                 {width:100%;}
+.table tbody.monster .name                 {text-align:left;width:100%;}
+.table tbody.monster .hp                   {white-space:nowrap;}
+
+/* SKILL */
+.table thead.skill .name                   {width:100%;}
+.table tbody.skill .name .description      {font-size:10px; white-space:normal;}
+.table tbody.skill .mp_consume .x          {font-size:9px;}
+.table tbody.skill .mp_consume .mp_consume {color:#8888FF;}
+.table tbody.skill .mp_consume .hp_consume {color:#FF6A6A;}
+.table tbody.skill .mp_consume .cast_range {color:green;}
+
+/* ѕјЌ≈Ћ» */
+.panel .panelBody {border: 1px solid #636563;background-color:#1E3247; text-align:center;}
+.panel .panelName {font-family:Georgia;font-size:14px;font-weight:bold;color:#D49019;}
+
+.panel .text {
+	border: 1px solid #636563;
+	background-color: #273B50;
+	font-family: Georgia;
+	font-size: 11px;
+	color: #94999F;
+}
+
+.panel .pass {
+	border: 1px solid #636563;
+	background-color: #273B50;
+	font-family: Georgia;
+	font-size: 11px;
+	color: #94999F;
+}
+
+.panel .select {
+	border:1px solid #636563;
+	background-color:#273B50;
+	font-family: Georgia;
+	font-size:11px;
+	color:#94999F;
+}
+
+.panel .checkbox {
+	color:#D49019;
+	background-color: #273B50;
+	border:1px solid #636563;
+}
+
+.panel .button {
+	border: 1px solid #636563;
+	background-color: #213E43;
+	padding: 1px;
+	font-family: Georgia;
+	font-size: 11px;
+	color: #94999F;
+}
+.panel .button:hover {
+	background-color: #234735;
+}
+
+.block {border:1px solid #636563;background-color:#1E3247;}
+
+.tabset_tabs {
+	list-style-type:none;
+	position:relative;
+	z-index:2;
+	white-space:nowrap;
+	bottom:1px;
+	
+}
+
+.tabset_tabs .tabMenuName {font-family:Georgia;font-size:13px;font-weight:bold;}
+
+.tabset_tabs li { 
+	display:inline;
+}
+.tabset_tabs a {
+	background-color:#213E43 ! important;
+	border:1px solid #636563;
+	text-decoration:none;
+	padding:0 0.6em;
+	border-left-width:0;
+	padding-bottom:1px;
+	font-weight: bold;
+	font-size:15px;
+}
+
+.tabset_tabs a:hover {
+	background-color:#234735 ! important
+}
+.tabset_tabs a.active {
+	background-color:#1E3247 ! important;
+	color: #D49019;
+	border-color:#636563;
+	border-left-width:1px;
+	border-bottom:1px solid #1E3247;
+	padding-top:1px;
+	position:relative;
+	z-index:3
+}
+
+.tabset_tabs a.active:hover{
+	background-color:#1E3247 ! important
+}
+
+.tabset_content{
+	border:1px solid #636563;
+	background-color:#1E3247;
+	position:relative;
+	z-index:1;
+	padding:0.5em 1em
+}
+.tabset_label{
+	display:none
+}
+
+.tabset_content_active{
+	display:block
+}
+
+@media aural{
+.tabset_content,
+.tabset_label{ display:block }
+}
+
+
+.L2JZmodulesTree .module {
+	color:#1F7994;
+	font-size:18;
+}
+
+.L2JZmodulesTree .container {
+	padding: 1px 1px 1px 20px;
+}
+
+.L2JZmodulesTree .folder {
+	color:#FF9900;
+	font-size:14;
+}
+
+.L2JZmodulesTree .template {
+	font-size:11;
+}
+
+.L2JZmodulesTree .php {
+	font-size:11;
+}
+
+.L2JZmodulesTree .js {
+	font-size:11;
+}
+
+.L2JZmodulesTree .panelRoot {
+	font-size:11;
+}
+
+.L2JZmodulesTree .tableRoot {
+	font-size:11;
+}
+
+
+.L2JZmodulesTree .languageRoot {
+	font-size:11;
+}
+

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panelRoot SYSTEM "../../engine/dtd/panelRoot.dtd">
+<panelRoot>
+	<!-- Moves char to this account -->
+    <panel name="moveCharToAccount" panelType="panel">
+        <onClick>
+            doQuery('account.action.moveCharToAccount',vars);
+            doQuery('account.chars',vars);
+            new l2jzTable('char.main');
+        </onClick>
+        <fields>
+            <hidden name="login"/>
+            <text name="char_name" maxlength="45" size="15"/>
+        </fields>		
+    </panel>
+	
+	<!-- Changes account password(for admins) -->
+    <panel name="changePass" panelType="panel">
+        <onClick>
+            doQuery('account.action.changePass',vars);
+        </onClick>
+        <fields>
+            <hidden name="login"/>
+            <text name="newPass" maxlength="50" size="16"/>
+        </fields>
+    </panel>
+    
+    <!-- Changes account password(for account owner) -->
+    <panel name="changeMyPass" panelType="tpanel" template="account.changeMyPass">
+        <onClick>
+            doQuery('account.action.changeMyPass',vars);
+        </onClick>
+        <fields>
+            <hidden name="login"/>
+            <pass name="pass" maxlength="50" size="16"/>
+            <pass name="newPass" maxlength="50" size="16" equal="newPassAgain"/>
+            <pass name="newPassAgain" maxlength="50" size="16"/>
+        </fields>
+    </panel>
+    
+    <!-- Changes account access -->
+    <panel name="changeAccess" panelType="panel">
+        <onClick>
+            doQuery('account.action.changeAccess',vars);
+            html.t('account.account',sT['account.main'],'mainSection');
+        </onClick>
+        <fields>
+            <hidden name="login"/>
+            <text name="builder" maxlength="8" size="8"/>
+        </fields>
+    </panel>
+    
+    <!-- Change Email(for admins and account owners) -->
+    <panel name="changeEmail" panelType="panel">
+        <onClick>
+            doQuery('account.action.changeEmail',vars);
+            html.t('account.account',sT['account.main'],'mainSection');
+        </onClick>
+        <fields>
+            <hidden name="login"/>
+            <text name="email" maxlength="60" size="25" email="true"/>
+        </fields>
+    </panel>
+	
+	<!-- Bans this account -->
+    <panel name="ban" panelType="button">
+        <onClick>
+            doQuery('account.action.ban',vars);
+            html.t('account.account',sT['account.main'],'mainSection');
+        </onClick>
+        <fields>
+            <hidden name="login"/>	
+        </fields>
+    </panel>
+	
+	<!-- Unbans this account -->
+    <panel name="unban" panelType="button">
+        <onClick>
+            doQuery('account.action.unban',vars);
+            html.t('account.account',sT['account.main'],'mainSection');
+        </onClick>
+        <fields>
+            <hidden name="login"/>
+        </fields>
+    </panel>
+</panelRoot>

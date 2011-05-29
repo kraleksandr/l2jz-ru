@@ -1,0 +1,20 @@
+<table border="0" cellpadding="3" cellspacing="0" width="600" class="entityTable">
+	<tr class="headTr">
+		<td width="32" valign="top"><img width="32" height="32" src="i/items/@:a.icon:@.png"></td>
+		<td align="left" width="100%">
+			@:html.a('item.recipe.'+a.sid,a.name):@ @:html.h('table.recipe.level'):@ @:a.recipe_level:@<br>
+			@:html.h('table.recipe.count'):@ @:a.count:@, @:html.h('table.recipe.chance'):@ @:a.chance:@%, @:html.h('table.recipe.mp'):@ @:a.mp:@
+		</td>
+	</tr><tr class="bodyTr">
+		<td colspan="2">
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tr>
+					<td name="recipe_container">
+						@:recipe.make_recipe(a.body,1,'recipe_'+a.id,true):@
+					</td>
+					<td id="@:a.id:@_recipe_calculator" align="right" valign="top"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>

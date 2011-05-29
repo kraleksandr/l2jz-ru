@@ -1,0 +1,27 @@
+<table border="0" cellpadding="3" cellspacing="0" width="350" class="entityTable">
+	<tr class="headTr">
+		<td colspan="2" rowspan="2" width="200" class="bodyTr">
+			@:html.a('map.clan.'+a.clan_id):@<span class="entityName">@:a.clan_name:@</span>
+		</td>
+		<td>@:a.fName.clan_lider:@</td>
+		<td>@:a.fName.clan_level:@</td>
+	</tr><tr class="bodyTr">
+		<td>@:a.fHTML.clan_lider:@</td>
+		<td>@:a.clan_level:@</td>
+	</tr><tr class="headTr">
+		<td colspan="2">@:a.fName.ally_name:@</td>
+		<td>@:a.fName.level_sum:@</td>
+		<td>@:a.fName.clan_count:@</td>
+	</tr><tr class="bodyTr">
+		<td colspan="2">@:(typeof(a.ally_name)=='string')?a.ally_name:'-':@</td>
+		<td>@:a.fHTML.level_sum:@</td>
+		<td>@:a.clan_count:@</td>
+	</tr><tr class="bodyTr">
+		<td colspan="4">
+			<div class="sectionsPanel">
+				&nbsp;Sections:&nbsp;
+				@:html.a2('clan.main.'+a.clan_id):@ <font size="-1">-</font> 
+			</div>
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pageRoot SYSTEM "../../engine/dtd/pageRoot.dtd">
+<pageRoot>
+    <!-- SKILLS -->
+    <section name="skills">
+        <page name="main">
+            html.t('skills.main',null,'mainSection');
+        </page>
+        <page name="class" arguments="id">
+            doQuery('skills.class',vars);
+            new l2jzTable('skill.class',{div:'mainSection'});
+        </page>
+        <page name="skill">
+            menu.message('Under construction.');
+        </page>
+    </section>
+</pageRoot>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Панель это аналог обычной html формы. Панель может включать в себя скрытые поля,
+поля ввода, чекбоксы, выпадающие списки и.т.д а также кнопки. Каждое поле имеет
+своё имя и значение. Значения полей панели можно задать при формирование панели.
+Значения большинства полей может менять сам пользователь(как в обычных формах).
+Для всей панели в целом и для каждого из её полей можно назначать обработчики на
+разные события. События могут быть следующими:
+	Для панели в целом:
+		На изменение -
+			Обработчик запустится когда пользователь из-
+			менит любое поле панели.
+		На нажатие -
+			Обработчик запустится когда будет нажата любая из кнопок панели
+	Для кнопок:								
+		На нажатие -
+			Обработчик запустится когда кнопка будет нажата
+	Для текстовых полей ввода:
+		На изменение -
+			Обработчик запустится когда поле будет изменено. Можно задать интервал
+			срабатывания(в милесекундах). Обработчик будет запущен только тогда, когда
+			с момента последнего изменения поля пройдёт время равное интервалу.
+	Для всех остальных полей:
+		На изменение -
+			Обработчик запустится когда поле будет изменено.
+			
+Панели создаются функцией pnl(panelName,row).
+panelName это имя панели. row это массив из которого могут браться начальные значения
+полей панели. Например если в поле есть <hidden name="char_id"> а в массиве row есть
+элемент row['char_id'], поле панели "char_id" получит значение этого поля.
+
+	
+АТТРИБУТЫ ТЭГОВ SECTION И PANEL:
+	name(должен быть задан для каждого section и panel)
+		По именам секций и панелей строится полное имя панели, по которому к ней
+		потом можно будет обратиться. Это аналогично полному пути к файлу в фай-
+		ловой системе.
+	access(необязательный атрибут)
+		Задаёт уровень доступа к панели. Если у пользователя недостаточный уро-
+		вень доступа то он не увидит панель.
+	queryLink(необязательный атрибут)
+		Панель(или целые поддеревья панелей) можно привязать к запросу(целым под-
+		деревьям запросов). По привязанному запросу устанавливается access панели
+		если он не был задан напрямую.
+
+АТТРИБУТЫ ТЭГА PANEL:
+    panelType
+        Задаёт способ отображения панели. Есть следующие режимы отображения:
+          panel
+              Строит панель следующего вида:
+                  |************|*************|*************|**********|
+                  |            | Field1 Name | Field2 Name | ******** |
+                  | Panel Name |*************|*************| |Button| |
+                  |            | Field1 Code | Field2 Code | ******** |
+                  |************|***************************|**********|
+              Field1 Code - это собственно поле ввода, выпадающий список и.т.д.
+          lpanel
+              Строит панель следующего вида:
+                  |*************|*************|**********|
+                  | Field1 Code | Field2 Code | |Button| |
+                  |***************************|**********|
+          tpanel
+              Строит панель по html шаблону. Для шаблона инициализируется следующий массив:
+              a = {
+                  'fName': {
+                      'имяПоля1': 'Отображаемое имя поля 1 из lng.xml файла',
+                      'имяПоля2': 'Отображаемое имя поля 2 из lng.xml файла',
+                      ...
+                      'имяПоляN': 'Отображаемое имя поля N из lng.xml файла'
+                  },
+                  'fHTML': {
+                      'имяПоля1': 'HTML код поля 1', 
+                      'имяПоля2': 'HTML код поля 2',
+                      ...
+                      'имяПоляN': 'HTML код поля N'
+                  },
+                  'panelName': 'Отображаемое имя панели из lng.xml файла'
+              }
+          button
+             Строит панель следующего вида:
+                  |**********|
+                  | |Button| |
+                  |**********|
+             Этот тип отображения можно применять, только если у панели есть только кнопки и
+             скрытые поля.
+	template(значение по умолчанию ptemplate_имя_панели)
+		Имя шаблона который будет использоваться в функции html.pnl.
+	onChangeT(значение по умолчанию 0)
+		Время срабатывания обработчика при изменение любого поля панели.
+	hasButton(значение по умолчанию TRUE)
+		Если у панели нет ни одной кнопки, то к панели будет автоматически
+		добавлена простая кнопка. Чтобы этого не происходило, нужно устано-
+		вить hasButton="FALSE"
+		
+ТЭГИ ТЕГА PANEL:
+    onClick
+		Содержит JavaScript код на нажатие любой кнопки. Этот код выполняется только
+		если у кнопки нет своего onClick тэга.
+	onChange(значение по умолчанию: null)
+		Содержит JavaScript код на нажатие любого поля. Этот код выполняется только
+		если у поля нет своего onClick тэга.
+	onAny
+	    Содержит JavaScript код на любое действие с любым полем панели. Срабатывает
+	    только у поля нет своего собственного обработчика.
+	fields
+	    Контейнер содержащий поля панели. Панель может и не иметь тэга fields. Тогда
+	    она будет состоять из одной автоматически добавленной кнопки.
+
+ТИПЫ ПОЛЕЙ ПАНЕЛИ(тэги которые могут находиться в тэге <fields>):
+Обозначения:
+    fName - имя поля(то-есть то что задано в аттрибуте name).
+    row - массив значений, который передаётся вторым аргументом в функцию генерации панели.
+Типы полей:
+	hidden
+		Задаёт скрытое поле панели. Hidden не может быть изменён, когда панель уже
+		создана и используется для хранения переменных значение которых было известно
+		при создании панели и которые не должны меняться пользователем.
+		АТТРИБУТЫ ПО УМОЛЧАНИЮ:
+			value = row[fName] (то-есть в row ищется одноимённый элемент).
+		АТТРИБУТЫ:
+			name(обязательный аттрибут) -
+				Задаёт имя поля.
+			value
+				Задаёт значение поля. Значение задаётся в виде шаблона. Массивом значе-
+				ний для него является второй аргумент функции построения панели. Например:
+				value="@this::mob_id@_@this::spoil@" будет заменено на row['mob_id']+'_'+row['spoil']
+	select
+		Выпадающий список. <select> содержит внутри себя либо набор тэгов <option> либо тэг <optionMaker>
+		Тэги <option> задают элементы списка. 
+		Тэг <optionMaker> содержит в себя JavaScript код который должен установить 2 переменные:
+			optionArray - одномерный  ассоциативный массив содержащий пары 
+				значение: отображаемое имя
+			элементов списка.
+			defaultOption - содержит значение выбираемой по умолчанию опции. Эта переменная может отсутство-
+			вать.
+			К моменту начала работы обработчика обе переменные уже объявлены. optionArray как пустой объект,
+			defaultOption как row[fName].
+	АТТРИБУТЫ:
+		name(обязательный аттрибут) -
+			Задаёт имя поля.
+-->
+<!ELEMENT panelRoot (section|panel)+>
+
+<!ELEMENT section (section|panel)+>
+<!ATTLIST section
+  name      CDATA #REQUIRED
+>
+
+<!ELEMENT panel (((onClick?,onChange?)|onAny?),fields?)>
+<!ATTLIST panel
+  name      CDATA #REQUIRED
+  panelType (panel|lpanel|tpanel|button) #REQUIRED
+  template  CDATA #IMPLIED
+  onChangeT CDATA #IMPLIED
+  hasButton (TRUE|FALSE) #IMPLIED
+  class     CDATA #IMPLIED
+  h         CDATA #IMPLIED
+>
+<!ELEMENT fields (hidden|text|pass|select|checkbox|image|button)+>
+
+<!ELEMENT onClick  (#PCDATA)>
+<!ELEMENT onChange (#PCDATA)>
+<!ELEMENT onAny    (#PCDATA)>
+
+<!ELEMENT hidden EMPTY>
+<!ATTLIST hidden
+  name CDATA #REQUIRED
+  value     CDATA #IMPLIED
+>
+
+
+
+<!ELEMENT text (onChange?)>
+<!ATTLIST text 
+  name      CDATA #REQUIRED
+  value     CDATA #IMPLIED
+  onChangeT CDATA #IMPLIED
+  minlength CDATA #IMPLIED
+  equal     CDATA #IMPLIED
+  email     CDATA #IMPLIED
+  h         CDATA #IMPLIED
+	  
+  maxlength CDATA #IMPLIED
+  size      CDATA #IMPLIED
+  class     CDATA #IMPLIED
+  style     CDATA #IMPLIED
+>
+
+<!ELEMENT pass (onChange?)>
+<!ATTLIST pass 
+  name      CDATA #REQUIRED
+  value     CDATA #IMPLIED
+  onChangeT CDATA #IMPLIED
+  minlength CDATA #IMPLIED
+  equal     CDATA #IMPLIED
+  h         CDATA #IMPLIED
+	  
+  maxlength CDATA #IMPLIED
+  size      CDATA #IMPLIED
+  class     CDATA #IMPLIED
+  style     CDATA #IMPLIED
+>
+	
+<!ELEMENT select (onChange?,((option?)|optionMaker))>
+<!ATTLIST select 
+  name      CDATA #REQUIRED
+  value     CDATA #IMPLIED
+  h         CDATA #IMPLIED
+  
+  class     CDATA #IMPLIED
+  style     CDATA #IMPLIED
+>
+<!ELEMENT option EMPTY>
+<!ATTLIST option 
+  name      CDATA #REQUIRED
+>
+<!ELEMENT optionMaker (#PCDATA)>
+
+	
+<!ELEMENT checkbox (onChange?)>
+<!ATTLIST checkbox 
+  name      CDATA #REQUIRED
+  value     CDATA #IMPLIED
+  h         CDATA #IMPLIED
+  
+  class     CDATA #IMPLIED
+  style     CDATA #IMPLIED
+>
+
+
+<!ELEMENT image (onClick?)>
+<!ATTLIST image 
+  name      CDATA #REQUIRED
+  value     CDATA #IMPLIED
+  
+  src       CDATA #IMPLIED
+  width     CDATA #IMPLIED
+  height    CDATA #IMPLIED
+  class     CDATA #IMPLIED
+  style     CDATA #IMPLIED
+>
+	
+<!ELEMENT button (onClick?)>
+<!ATTLIST button 
+  name      CDATA #REQUIRED
+  value     CDATA #IMPLIED
+  h         CDATA #IMPLIED
+  
+  class     CDATA #IMPLIED
+  style     CDATA #IMPLIED
+>

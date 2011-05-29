@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE queryRoot SYSTEM "../../engine/dtd/queryRoot.dtd">
+<queryRoot>
+    <!-- CHAR -->
+    <section name="char" access="10" sAccess="myChar">
+        <variable name="char_id" type="none"/>
+        <query name="main"/>
+        <query name="inventory" access="30"/>
+        <query name="skills"/>
+        <query name="recipebook"/>
+        <query name="friends"/>
+        <section name="action">
+            <section name="main">
+                <query name="kick" access="100"/>
+                <query name="changeAccess" access="100"> </query>
+                <query name="sendWhisper" access="10"> </query>
+                <query name="changeClass" access="100"> </query>
+                <query name="changeName" access="100"> </query>
+                <query name="teleport" access="100"> </query>
+                <query name="moveToAccount" access="100"> </query>
+            </section>
+            <section name="skills">
+                <query name="addSkill" access="100"> </query>
+                <query name="setSkillLevel" access="100"> </query>
+                <query name="deleteSkill" access="100"> </query>
+            </section>
+            <section name="item" access="100">
+                <query name="addItem"> </query>
+                <query name="changeItemCount"> </query>
+                <query name="deleteItem"> </query>
+                <query name="enchantItem"> </query>
+            </section>
+        </section>
+    </section>
+</queryRoot>

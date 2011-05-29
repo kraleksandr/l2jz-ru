@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pageRoot SYSTEM "../../engine/dtd/pageRoot.dtd">
+<pageRoot>
+    <!-- CASTLES -->
+    <section name="castles">
+        <page name="table">
+            doQuery('castles.main',vars);
+            castlesEngine.drawTable();
+        </page>
+        <page name="map">
+            doQuery('castles.main',vars);
+            castlesEngine.drawMap();
+        </page>
+    </section>
+</pageRoot>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languageRoot SYSTEM "../../../engine/dtd/languageRoot.dtd">
+<languageRoot>
+    <h name="page">
+        <h name="item">
+            <h name="main.linkName" value="Main"/>
+            <h name="drop.linkName" value="Drop"/>
+            <h name="sell.linkName" value="Shop"/>
+            <h name="recipe.linkName" value="Recipe"/>
+            <h name="owners.linkName" value="Owners"/>
+        </h>
+        <h name="monster">
+            <h name="main.linkName" value="Main"/>
+            <h name="skills.linkName" value="Skills"/>
+            <h name="minions.linkName" value="Minions"/>
+        </h>
+    </h>
+    <h name="table">
+        <h name="recipe">
+            <h name="level" value="Level"/>
+            <h name="count" value="Quantity"/>
+            <h name="chance" value="Chance"/>
+            <h name="mp" value="MP"/>
+            <h name="calculator_name" value="Crafting Price"/>
+            <h name="total" value="Total"/>
+        </h>
+    </h>
+    <h name="panel.drop">
+        <h name="recipe">
+            <h name="calculate">
+                <h name="button" value="Calculate"></h>
+            </h>
+        </h>
+    </h>
+</languageRoot>

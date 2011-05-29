@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tableRoot SYSTEM "../../engine/dtd/tableRoot.dtd">
+<tableRoot width="600">
+	<!-- CHAR -->
+	<section name="char" tableType="char">
+		<table name="entity">
+			<entityTable>
+				<column name="location" access="map.char"/>
+				<incomeColumns/>
+			</entityTable>
+		</table>
+		<table name="main">
+			<showAll>
+				<column name="location" access="map.char"/>
+				<incomeColumns/>
+			</showAll>
+		</table>   
+		<table name="top100">
+			<showAll>
+				<column name="location" access="map.char"/>
+				<column name="rowCounter"/>
+				<incomeColumns/>
+			</showAll>
+		</table>
+	</section>
+	
+	<!-- ACCOUNT -->
+	<section name="account" tableType="account">
+		<table name="entity">
+			<entityTable/>
+		</table>
+		<table name="main">
+			<showAll/>
+		</table>
+	</section>
+	
+	<!-- CLAN -->
+	<section name="clan" tableType="clan">
+		<table name="entity">
+			<entityTable>
+				<column name="location" access="map.clan"/>
+				<incomeColumns/>
+			</entityTable>
+		</table>
+		<table name="main">
+			<jumpTables groupBy="ally_name">
+				<column name="location" access="map.clan"/>
+				<incomeColumns/>
+			</jumpTables>
+		</table>
+	</section>
+	
+	<!-- ITEMS -->
+	<section name="items" tableType="items">
+		<table name="entity">
+			<entityTable/>
+		</table>
+		<table name="oneItem">
+			<rowTable/>
+		</table>
+		<table name="main">
+			<showAll/>
+		</table>
+		<table name="byType">
+			<tabFilter groupBy="bodypart"/>
+		</table>
+		<table name="byGtype">
+			<jumpTables groupBy="gtype"/>
+		</table>
+		<table name="luxor">
+			<tabFilter groupBy="gtype"/>
+		</table>
+		<table name="sets">
+			<jumpTables groupBy="set_id"/>
+		</table>
+		<table name="inventory" width="700">
+			<jumpTables groupBy="gtype"/>
+			<tabFilter groupBy="crystal_type"/>
+			<tabFilter groupBy="loc"/>
+		</table>
+		<table name="drop" width="300">
+			<inlineTables groupBy="sweep"/>
+		</table>
+		<table name="shop">
+			<tabFilter groupBy="gtype"/>
+		</table>
+	</section>
+	
+	<!-- MONSTER -->
+	<section name="monster" tableType="monster">
+		<table name="entity">
+			<entityTable>
+				<incomeColumns/>
+				<column name="p_m_atk"/>
+				<column name="p_m_def"/>
+				<column name="p_m_spd"/>
+				<column name="p_m_walkrun"/>
+			</entityTable>
+		</table>
+		<table name="type">
+			<showAll/>
+		</table>
+		<table name="drop" width="300">
+			<inlineTables groupBy="sweep"/>
+		</table>
+	</section>
+	
+	<!-- SKILL -->
+	<section name="skill" tableType="skill">
+		<table name="main">
+			<showAll/>
+		</table>
+		<table name="class">
+			<tabFilter groupBy="min_level"/>
+		</table>
+		<table name="char">
+			<tabFilter groupBy="class_index">
+				<incomeColumns/><!-- 
+					<column name="setSkillLevelPanel" access="char.action.skills.setSkillLevel"/>
+					<column name="deleteSkillPanel" access="char.action.skills.deleteSkill"/> -->
+			</tabFilter>
+		</table>		
+	</section>
+	
+	<!-- CASTLE -->
+	<section name="castle" tableType="castle">
+		<table name="entity">
+			<entityTable/>
+		</table>
+	</section>
+	
+	<!-- SERVER -->
+	<section name="server" tableType="server">
+		<table name="entity">
+			<entityTable/>
+		</table>
+	</section>
+</tableRoot>

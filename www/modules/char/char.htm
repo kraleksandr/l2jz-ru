@@ -1,0 +1,65 @@
+<table border="0" cellpadding="3" cellspacing="0" width="600" class="entityTable">
+	<tr class="headTr">
+		<td colspan="4" rowspan="2" width="250" class="bodyTr">
+			@:a.fHTML.location:@<span class="entityName">@:a.char_name:@</span><br>
+			<font size="-2">@:a.fHTML.title:@</font><br>
+			@:a.fHTML.account_name:@
+		</td>
+		<td>@:a.fName.sex:@</td>
+		<td>@:a.fName.level:@</td>
+		<td colspan="2">@:a.fName.class_id:@</td>
+		<td>@:a.fName.clan_name:@</td>
+	</tr><tr class="bodyTr">
+		<td>@:a.fHTML.sex:@</td>
+		<td>@:a.level:@</td>
+		<td colspan="2">@:a.fHTML.class_id:@</td>
+		<td>@:a.fHTML.clan_name:@</td>
+	</tr><tr class="headTr"> 
+		<td colspan="2">@:a.fName.maxHp:@</td>
+		<td colspan="2">@:a.fName.maxMp:@</td>
+		<td colspan="2">@:a.fName.exp:@</td>
+		<td>@:a.fName.sp:@</td>
+		<td>@:a.fName.onlinetime:@</td>
+		<td><font class="t_h_t">@:a.fName.pvpkills:@</font></td>
+	</tr><tr class="bodyTr">
+		<td colspan="2">@:a.fHTML.maxHp:@</td>
+		<td colspan="2">@:a.fHTML.maxMp:@</td>
+		<td colspan="2">@:a.exp:@</td>
+		<td>@:a.sp:@</td>
+		<td>@:a.fHTML.onlinetime:@ h</td>
+		<td>@:a.pvpkills:@/@:a.pkkills:@</td>
+	</tr><tr align="center" class="headTr">
+		<td colspan="2">@:html.h('table.char.a_c_spd'):@</td>
+		<td colspan="2">@:html.h('table.char.p_m_atk'):@</td>
+		<td>@:html.h('table.char.p_m_def'):@</td>
+		<td>@:a.fName.acc:@</td>
+		<td>@:a.fName.crit:@</td>
+		<td>@:a.fName.accesslevel:@</td>
+		<td>@:a.fName.online:@</td>
+	</tr><tr class="bodyTr">
+		<td colspan="2">@:a.pSpd:@/@:a.mSpd:@</td>
+		<td colspan="2">@:a.pAtk:@/@:a.mAtk:@</td>
+		<td>@:a.pDef:@/@:a.mDef:@</td>
+		<td>@:a.acc:@</td>
+		<td>@:a.crit:@</td>
+		<td>@:a.accesslevel:@</td>
+		<td>@:a.fHTML.online:@</td>
+	</tr><tr class="bodyTr">
+		<td colspan="9">
+			<table border="0" cellpadding="3" cellspacing="0" class="sectionsPanel">
+				<tr class="headTr">
+					<td>
+						&nbsp;Sections:&nbsp;
+						@:html.a2('char.main.'+a.char_id):@ <font size="-1">-</font> 
+						@:html.a2('char.inventory.'+a.char_id):@ <font size="-1">-</font> 
+						@:html.a2('char.skills.'+a.char_id):@ <font size="-1">-</font> 
+						@:html.a2('char.friends.'+a.char_id):@ <font size="-1">-</font> 
+						@:html.a2('char.recipebook.'+a.char_id):@
+					</td>
+					<td width="100%"></td>
+					<td>@:(a.online==-1)?html.pnl('main.kick',a):'':@</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>

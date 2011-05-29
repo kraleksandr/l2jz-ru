@@ -1,0 +1,33 @@
+<table border="0" cellpadding="3" cellspacing="0" width="400" class="entityTable">
+	<tr class="headTr">
+		<td colspan="2" rowspan="2" width="100%" class="bodyTr"><span class="entityName">@:a.login:@</span></td>
+		<td>@:a.fName.access_level:@</td>
+	</tr><tr class="bodyTr">
+		<td>@:a.access_level:@</td>
+	</tr><tr class="headTr">
+		<td>@:a.fName.lastactive:@</td>
+		<td>@:a.fName.email:@</td>
+		<td>@:a.fName.lastIP:@</td>
+	</tr><tr class="bodyTr">
+		<td nowrap>@:a.fHTML.lastactive:@</td>
+		<td>@:a.email:@</td>
+		<td>@:a.lastIP:@</td>
+	</tr><tr class="bodyTr">
+		<td colspan="3">
+			<table class="sectionsPanel" cellpadding="3" cellspacing="0">
+				<tr>
+					<td>&nbsp;Sections:&nbsp;</td>
+					<td>@:html.a2('account.main.'+a.login):@</td>
+					<td width="100%"></td>
+					<td>
+						@:
+							(a.access_level==-100)?
+							  html.pnl('unban',a)
+							: html.pnl('ban',a)
+						:@
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>

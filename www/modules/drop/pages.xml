@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pageRoot SYSTEM "../../engine/dtd/pageRoot.dtd">
+<pageRoot>
+    <!-- ITEM -->
+    <section name="item" arguments="id">
+        <startHandler if="!l2jz.cmpFPage('@back.@any.@back')">
+            doQuery('item.main',vars);
+			new l2jzTable('items.entity',{tplName:'itemMain',div:'mainSection'});
+        </startHandler>
+        <page name="main"/>
+        <page name="drop">
+            doQuery('item.drop',vars);
+            new l2jzTable('monster.drop');
+        </page>
+        <page name="sell">
+            doQuery('item.sell',vars);
+            new l2jzTable('monster.type');
+        </page>
+        <page name="recipe">
+            doQuery('item.recipe',vars);
+            recipe.draw('infoSection');
+        </page>
+        <page name="owners">
+            doQuery('item.owners',vars);
+            new l2jzTable('char.main');
+        </page>
+    </section>
+    
+    <!-- MONSTER -->
+    <section name="monster" arguments="id">
+        <startHandler if="!l2jz.cmpFPage('@back.@any.@back')">
+            doQuery('monster.main',vars);
+            new l2jzTable('monster.entity',{tplName:'monsterMain',div:'mainSection'});
+        </startHandler>
+        <page name="main">
+            if(
+                (sT['monster.main'].type=='L2Merchant')||
+                (sT['monster.main'].type=='L2Fisherman')||
+                (sT['monster.main'].type=='L2MercManager')
+            ){
+                doQuery('monster.sell',vars);
+                new l2jzTable('items.shop');
+            } else {
+                doQuery('monster.drop',vars);
+                new l2jzTable('items.drop');
+            }
+        </page>
+        <page name="skills">
+            doQuery('monster.skills',vars);
+            new l2jzTable('skill.main');
+        </page>
+        <page name="minions">
+            doQuery('monster.minions',vars);
+            new l2jzTable('monster.type');
+        </page>
+    </section>
+</pageRoot>

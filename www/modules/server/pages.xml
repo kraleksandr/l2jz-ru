@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pageRoot SYSTEM "../../engine/dtd/pageRoot.dtd">
+<pageRoot>
+    <!-- SERVER -->
+    <section name="server">
+        <page name="main">
+            doQuery('server.main',vars);
+			new l2jzTable('server.entity',{tplName:'server',div:'mainSection'});
+            html.t('mainPanel',sT['server.main'],'panelSection');
+        </page>		
+    </section>
+</pageRoot>

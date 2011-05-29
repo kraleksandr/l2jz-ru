@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE queryRoot SYSTEM "../../engine/dtd/queryRoot.dtd">
+<queryRoot>
+    <!-- SKILLS -->
+    <section name="skills">
+        <variable name="id" type="none"/>
+        <query name="class" cache="3600"/>	
+    </section>
+</queryRoot>

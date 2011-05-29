@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE queryRoot SYSTEM "../../engine/dtd/queryRoot.dtd">
+<queryRoot>
+	<!-- SEVEN SIGNS -->
+	<section name="sevensigns">
+		<query name="main" cache="3600"/>
+	</section>
+</queryRoot>

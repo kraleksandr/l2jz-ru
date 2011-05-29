@@ -1,0 +1,92 @@
+<table cellspacing="1" cellpadding="0" class="block" width="100%">
+	<tr>
+		<td align="center">
+			<table border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td>&nbsp;&nbsp;&nbsp;<a
+						onClick="l2jz.goBack()"
+						OnMouseDown="l2jz.setBackLink(this)"
+						href="#back"
+						style='text-decoration:none;font-family:sans-serif;font-size: 14px;'
+					>&laquo;&laquo;&laquo;</a>&nbsp;</td>
+				<td>
+				  <table border="0" cellpadding="0" cellspacing="0">
+					<tr><td><img src="i/tdot.gif" width="1" height="2"/></td></tr>
+					<tr><td><table class="block" border="0" cellpadding="0" cellspacing="0"><tr>
+					  <td id="menu_system_indicator" bgcolor="#339900"><img src="i/tdot.gif" width="6" height="6"/></td>
+					</tr></table></td></tr>
+				  </table>
+				</td>
+				<td>&nbsp;<a
+						onClick="l2jz.goForward()"
+						OnMouseDown="l2jz.setForwardLink(this)"
+						href="#"
+						style='text-decoration:none;font-family:sans-serif;font-size: 14px;'
+					>&raquo;&raquo;&raquo;</a>&nbsp;&nbsp;&nbsp;</td>
+			  </tr>
+			</table>
+		</td>
+		<td width="100%">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<table cellspacing="1" cellpadding="0" class="block" width="35">
+							<tr>
+								<td>
+									<table border="0" cellspacing="0" cellpadding="0" width="76">
+										<tr>
+											<td>&nbsp;</td>
+											<td>Time:&nbsp;</td>
+											<td align="center"><div id="query_time_section" style="font-size:10px">@:Math.round(result.responseTime*1000)/1000:@</div></td>
+											<td>&nbsp;</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>&nbsp;</td>
+					<td id="address_section"></td>
+					<td width="100%"><img src="i/tdot.gif" width="100%" height="1"/></td>
+					<td>
+						@:
+							(l2jz.config.gServers.length>1)?
+							  html.pnl('changeGS')
+							: ''
+						:@
+					</td>
+					<td>&nbsp;</td>
+					<td>
+						@:
+							(l2jz.config.languages.length>1)?
+							  html.pnl('changeLanguage')
+							: ''
+						:@
+					</td>
+					<td>&nbsp;</td>
+					<td>
+						@:html.pnl('engine.compileL2JZ'):@
+					</td>
+					<td>&nbsp;</td>
+					<td>
+						@:
+							(sT.l2jz_user.login=='')?
+							  html.aButton('info.forgot_password','Forgot Pass')
+							: html.aButton('account.main.'+sT.l2jz_user.login,'Home','class="button"')
+						:@
+					</td>
+					<td>&nbsp;</td>
+					<td>
+						@:
+							(sT.l2jz_user.login=='')?
+							  html.aButton('info.register_user','Register')
+							: html.pnl('exitUser');
+						:@
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>

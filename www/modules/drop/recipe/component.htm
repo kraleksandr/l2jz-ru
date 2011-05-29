@@ -1,0 +1,23 @@
+<table border="0" cellpadding="1" cellspacing="0" name="recipe_component" >
+	<tr>
+		<td colspan="2" align="left" valign="bottom">
+			<input type="checkbox" 
+						 style="color:#D49019;border:1px solid #636563" 
+						 name="recipe_@:a.recipe_id:@"
+						 parent_id="@:a.parent_id:@"
+						 id="@:a.this_id:@"
+						 item_id="@:a.item_id:@"
+						 count="@:a.count*a.recipe_count:@"
+						 OnClick="recipe.change_components('@:a.recipe_id:@',this)"
+						 @:a.checked:@
+			/>
+			<b>@:a.count:@</b> @:html.a('item.main.'+a.item_id,a.name):@
+			<font style="font-size:10px">@:(a.count!=1)?'('+a.count*a.recipe_count+' '+html.h('table.recipe.total')+')':'':@</font> <img src="modules/drop/i/items_small/@:a.icon:@.png"/>
+		</td>
+	</tr><tr>
+		<td><img src="i/tdot.gif" width="20" height="1"></td>
+		<td id="@:a.this_id:@_body">
+			@:(a.body)?recipe.make_recipe(a.body,a.count*a.recipe_count/a.r_count,a.this_id,false):'':@
+		</td>
+	</tr>
+</table>

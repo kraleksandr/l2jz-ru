@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languageRoot SYSTEM "../../../engine/dtd/languageRoot.dtd">
+<languageRoot>
+    <h name="page">
+        <h name="skills">
+            <h name="main.linkName" value="Skills"/>
+            <h name="class">
+				<h name="pageTitle" value="@:a.linkName:@"/>
+                <h name="0.linkName" value="Fighter"/>
+                <h name="1.linkName" value="Warrior"/>
+                <h name="2.linkName" value="Gladiator"/>
+                <h name="3.linkName" value="Warlord"/>
+                <h name="4.linkName" value="Knight"/>
+                <h name="5.linkName" value="Paladin"/>
+                <h name="6.linkName" value="Dark Avenger"/>
+                <h name="7.linkName" value="Rogue"/>
+                <h name="8.linkName" value="Treasure Hunter"/>
+                <h name="9.linkName" value="Hawkeye"/>
+                <h name="10.linkName" value="Mage"/>
+                <h name="11.linkName" value="Wizard"/>
+                <h name="12.linkName" value="Sorcerer"/>
+                <h name="13.linkName" value="Necromancer"/>
+                <h name="14.linkName" value="Warlock"/>
+                <h name="15.linkName" value="Cleric"/>
+                <h name="16.linkName" value="Bishop"/>
+                <h name="17.linkName" value="Prophet"/>
+                <h name="18.linkName" value="Elven Fighter"/>
+                <h name="19.linkName" value="Elven Knight"/>
+                <h name="20.linkName" value="Temple Knight"/>
+                <h name="21.linkName" value="Swordsinger"/>
+                <h name="22.linkName" value="Elven Scout"/>
+                <h name="23.linkName" value="Plains Walker"/>
+                <h name="24.linkName" value="Silver Ranger"/>
+                <h name="25.linkName" value="Elven Mage"/>
+                <h name="26.linkName" value="Elven Wizard"/>
+                <h name="27.linkName" value="Spellsinger"/>
+                <h name="28.linkName" value="Elemental Summoner "/>
+                <h name="29.linkName" value="Oracle"/>
+                <h name="30.linkName" value="Elder"/>
+                <h name="31.linkName" value="Dark Fighter"/>
+                <h name="32.linkName" value="Palus Knight"/>
+                <h name="33.linkName" value="Shillien Knight"/>
+                <h name="34.linkName" value="Bladedancer"/>
+                <h name="35.linkName" value="Assassin"/>
+                <h name="36.linkName" value="Abyss Walker"/>
+                <h name="37.linkName" value="Phantom Ranger"/>
+                <h name="38.linkName" value="Dark Mage"/>
+                <h name="39.linkName" value="Dark Wizard"/>
+                <h name="40.linkName" value="Spellhowler"/>
+                <h name="41.linkName" value="Phantom Summoner"/>
+                <h name="42.linkName" value="Shillien Oracle"/>
+                <h name="43.linkName" value="Shilien Elder"/>
+                <h name="44.linkName" value="Orc Fighter"/>
+                <h name="45.linkName" value="Orc Raider"/>
+                <h name="46.linkName" value="Destroyer"/>
+                <h name="47.linkName" value="Orc Monk"/>
+                <h name="48.linkName" value="Tyrant"/>
+                <h name="49.linkName" value="Orc Mage"/>
+                <h name="50.linkName" value="Orc Shaman"/>
+                <h name="51.linkName" value="Overlord"/>
+                <h name="52.linkName" value="Warcryer"/>
+                <h name="53.linkName" value="Dwarven Fighter"/>
+                <h name="54.linkName" value="Scavenger"/>
+                <h name="55.linkName" value="Bounty Hunter"/>
+                <h name="56.linkName" value="Artisan"/>
+                <h name="57.linkName" value="Warsmith"/>
+                <h name="88.linkName" value="Duelist"/>
+                <h name="89.linkName" value="Dreadnought"/>
+                <h name="90.linkName" value="Phoenix Knight"/>
+                <h name="91.linkName" value="Hell Knight"/>
+                <h name="92.linkName" value="Sagittarius"/>
+                <h name="93.linkName" value="Adventurer"/>
+                <h name="94.linkName" value="Archmage"/>
+                <h name="95.linkName" value="Soultaker"/>
+                <h name="96.linkName" value="Arcana Lord"/>
+                <h name="97.linkName" value="Cardinal"/>
+                <h name="98.linkName" value="Hierophant"/>
+                <h name="99.linkName" value="Evas Templar"/>
+                <h name="100.linkName" value="Sword Muse"/>
+                <h name="101.linkName" value="Wind Rader"/>
+                <h name="102.linkName" value="Moonlightsentinel"/>
+                <h name="103.linkName" value="Mystic Muse"/>
+                <h name="104.linkName" value="Elementalmaster"/>
+                <h name="105.linkName" value="Evas Saint"/>
+                <h name="106.linkName" value="Shilien Templar"/>
+                <h name="107.linkName" value="Spectral Dancer"/>
+                <h name="108.linkName" value="Ghost Hunter"/>
+                <h name="109.linkName" value="Ghost Sentinel"/>
+                <h name="110.linkName" value="Storm Screamer"/>
+                <h name="111.linkName" value="Spectral Master"/>
+                <h name="112.linkName" value="Shilien Saint"/>
+                <h name="113.linkName" value="Titan"/>
+                <h name="114.linkName" value="Grand Khavatori"/>
+                <h name="115.linkName" value="Dominator"/>
+                <h name="116.linkName" value="Doomcryer"/>
+                <h name="117.linkName" value="Fortune Seeker"/>
+                <h name="118.linkName" value="Maestro"/>
+            </h>
+        </h>
+    </h>
+</languageRoot>

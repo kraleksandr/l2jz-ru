@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languageRoot SYSTEM "../../../engine/dtd/languageRoot.dtd">
+<languageRoot>
+	<h name="page.server.main">
+		<h name="linkName" value="@:sT.GS.name:@"/>
+		<h name="title" value="@:sT.GS.name:@"/>
+	</h>
+	<h name="table">
+		<h name="server">
+			<h name="rateXp" value="Exp"/>
+			<h name="rateSp" value="Sp"/>
+			<h name="rateDropAdena" value="Adena"/>
+			<h name="rateDropItems" value="Drop"/>
+			<h name="rateDropSpoil" value="Spoil"/>
+			<h name="char_count" value="Total Chars"/>
+			<h name="acc_count" value="Total Accounts"/>
+			<h name="adena_count" value="Total Adena"/>
+			<h name="sum_level" value="Average Level"/>
+		</h>
+	</h>
+</languageRoot>

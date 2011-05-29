@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pageRoot SYSTEM "../../engine/dtd/pageRoot.dtd">
+<pageRoot>
+    <!-- ACCOUNT -->
+    <section name="account" arguments="login">
+        <page name="main">
+            doQuery('account.main',vars);
+			new l2jzTable('account.entity',{tplName:'account',div:'mainSection'});
+            html.t('account.mainPanel',sT['account.main'],'panelSection');
+            doQuery('account.chars',vars);
+            new l2jzTable('char.main');
+        </page>
+    </section>
+</pageRoot>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languageRoot SYSTEM "../../../engine/dtd/languageRoot.dtd">
+<languageRoot>
+    <h name="page.char">
+        <h name="main.linkName" value="Main"/>
+        <h name="inventory.linkName" value="Inventory"/>
+        <h name="skills.linkName" value="Skills"/>
+        <h name="friends.linkName" value="Friends"/>
+        <h name="recipebook.linkName" value="Recipe Book"/>
+    </h>
+	<h name="query.char">
+		<h name="inventory">
+			<h name="empty" value="No items."/>
+		</h>
+	</h>
+    <h name="panel.char">
+        <h name="main">
+            <h name="kick">
+                <h name="button" value="Kick"/>
+            </h>
+            <h name="changeAccess" value="Set\nBuilder"/>
+            <h name="sendWhisper" value="Send\nWhisper">
+                <h name="whisper" value="Whisper text"/>
+                <h name="button" value="Send"/>
+            </h>
+            <h name="changeClass" value="Set\nClass">
+                <h name="class_id" value="Class"/>
+            </h>
+            <h name="changeName" value="Change\nName">
+                <h name="char_name" value="New name"/>
+                <h name="button" value="Change"/>
+            </h>
+            <h name="teleport" value="Teleport\nChar">
+                <h name="xyz" value="X  Y  Z"/>
+                <h name="button" value="Go"/>
+            </h>
+            <h name="moveToAccount" value="Move Char\nTo Account">
+                <h name="login" value="Account"/>
+                <h name="button" value="Move"/>
+            </h>
+        </h>
+        <h name="skills">
+            <h name="addSkill" value="Add\nSkill">
+                <h name="skill_id" value="Skill ID"/>
+                <h name="skill_level" value="Level"/>
+            </h>
+            <h name="deleteSkill">
+                <h name="button" value="Delete"/>
+            </h>
+        </h>
+        <h name="item">
+            <h name="addItem" value="Add\nitem">
+                <h name="count" value="Count"/>
+                <h name="button" value="Add"/>
+            </h>
+            <h name="deleteItem">
+                <h name="button" value="Delete"/>
+            </h>
+        </h>
+    </h>
+    <h name="etc">
+            </h>
+</languageRoot>

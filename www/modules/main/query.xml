@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE queryRoot SYSTEM "../../engine/dtd/queryRoot.dtd">
+<queryRoot>
+	<!-- INFO -->
+	<section name="info">
+        <query name="welcome"/>
+    </section>
+	
+	<!-- CHARS -->
+	<section name="chars">
+		<query name="builders" cache="3600"/>	
+		<query name="online" cache="180"/>
+		<query name="top100" cache="3600"/>
+		<query name="top100adena" cache="3600"/>
+		<query name="search" access="10">
+			<variable name="id" type="string" minlength="2"/>
+		</query>
+	</section>
+	
+	<!-- ACCOUNTS -->
+	<section name="accounts" access="10">
+		<query name="all"/>
+		<query name="builders"/>
+		<query name="search">
+			<variable name="id" type="string" minlength="2"/>
+		</query>
+	</section>
+	
+	<!-- CLANS -->
+	<section name="clans">
+		<query name="all_clans" cache="3600"/>
+		<query name="search">
+			<variable name="id" type="string" minlength="2"/>
+		</query>
+	</section>
+
+	<!-- ITEMS -->
+	<section name="items">
+		<query name="type" cache="3600">
+			<variable name="id" type="none"/>
+		</query>
+		<query name="recipe" cache="3600">
+			<variable name="id" type="none"/>
+		</query>
+		<query name="sets" cache="3600">
+			<variable name="id" type="none"/>
+		</query>
+		<query name="luxor" cache="3600">
+		</query>
+		<query name="search">
+			<variable name="id" type="string" minlength="2"/>
+		</query>
+	</section>
+
+	<!-- MONSTERS -->
+	<section name="monsters">
+		<query name="type" cache="3600">
+			<variable name="id" type="none"/>
+		</query>
+		<query name="search">
+			<variable name="id" type="string" minlength="2"/>
+		</query>
+	</section>
+	
+	<!-- ENGINE -->
+	<section name="engine">
+		<section name="user" saveJS="l2jz_user">
+			<query name="register">
+				<variable name="login" type="newLogin"/>
+				<variable name="pass" type="newPass"/>
+				<variable name="email" type="email"/>
+			</query>
+			<query name="login"/>
+			<query name="getPassByMail">
+				<variable name="login" type="login"/>
+				<variable name="email" type="email"/>
+			</query>
+			<query name="exit"/>
+		</section>
+		<query name="mloader">
+			<variable name="moduleName" type="none"/>
+		</query>
+		<query name="languageLoader">
+			<variable name="languageName" type="none"/>
+		</query>
+		<query name="changeGS" saveJS="GS">
+			<variable name="GS" type="none"/>
+		</query>
+		<query name="compileL2JZ" access="100"/>	
+	</section>
+</queryRoot>

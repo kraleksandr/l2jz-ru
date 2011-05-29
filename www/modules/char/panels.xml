@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panelRoot SYSTEM "../../engine/dtd/panelRoot.dtd">
+<panelRoot>
+    <!-- Panels on char.main page -->
+    <section name="main">
+        <panel name="kick" panelType="button">
+            <fields>
+                <hidden name="char_id"/>
+            </fields>
+        </panel>
+        <panel name="changeAccess" panelType="panel">
+            <fields>
+                <hidden name="char_id"/>
+                <text name="builder" maxlength="8" size="8"/>
+            </fields>
+        </panel>
+        <panel name="sendWhisper" panelType="panel">
+            <fields>
+                <hidden name="char_id"/>
+                <text name="whisper" maxlength="300" size="109"/>
+            </fields>
+        </panel>
+        <panel name="changeClass" panelType="panel">
+            <fields>
+                <hidden name="char_id"/>
+                <select name="class_id"/>
+            </fields>
+        </panel>
+        <panel name="changeName" panelType="panel">
+            <fields>
+                <hidden name="char_id"/>
+                <text name="char_name" maxlength="64" size="11"/>
+            </fields>
+        </panel>
+        <panel name="teleport" panelType="panel">
+            <fields>
+                <hidden name="char_id"/>
+                <text name="xyz" maxlength="40" size="24"/>
+            </fields>
+        </panel>
+        <panel name="moveToAccount" panelType="panel">
+            <fields>
+                <hidden name="char_id"/>
+                <text name="login" maxlength="64" size="11"/>
+            </fields>
+        </panel>
+    </section>
+    
+    <!-- Panels on char.item page -->
+    <section name="item">
+        <panel name="addItem" panelType="panel">
+            <fields>
+                <hidden name="char_id"/>
+                <text name="item_id" maxlength="10" size="8"/>
+                <text name="count" maxlength="12" size="10"/>
+            </fields>			
+        </panel>
+        <panel name="changeItemCount" panelType="lpanel">
+            <fields>
+                <hidden name="item_obj_id"/>
+                <text name="count" maxlength="12" size="10"/>
+            </fields>
+        </panel>
+        <panel name="deleteItem" panelType="button">
+            <fields>
+                <hidden name="item_obj_id"/>
+            </fields>
+        </panel>
+        <panel name="enchantItem" panelType="lpanel">
+            <fields>
+                <hidden name="item_obj_id"/>
+                <text name="enchant_level" maxlength="6" size="6"/>
+            </fields>
+        </panel>
+    </section>
+    
+    <!-- Panels on char.skills page -->
+    <section name="skills">
+        <panel name="addSkill" panelType="panel">
+            <fields>
+                <hidden name="char_id"/>
+                <text name="skill_id" maxlength="6" size="6"/>
+                <text name="skill_level" maxlength="6" size="6"/>
+            </fields>
+        </panel>
+        <panel name="setSkillLevel" panelType="lpanel">
+            <fields>
+                <hidden name="char_id"/>
+                <hidden name="skill_id"/>
+                <text name="skill_level" maxlength="6" size="6"/>
+            </fields>
+        </panel>
+        <panel name="deleteSkill" panelType="button">
+            <fields>
+                <hidden name="char_id"/>
+                <hidden name="skill_id"/>
+                <hidden name="skill_level"/>
+            </fields>
+        </panel>
+    </section>
+</panelRoot>

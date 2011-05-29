@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE queryRoot SYSTEM "../../engine/dtd/queryRoot.dtd">
+<queryRoot>
+    <!-- MAP -->
+    <section name="map" saveJS="map">
+        <query name="char" access="10" sAccess="myChar">
+            <variable name="char_id" type="none"/>
+        </query>
+        <query name="monster">
+            <variable name="id" type="none"/>
+        </query>
+		<query name="item">
+            <variable name="id" type="none"/>
+        </query>
+        <query name="chars_online" cache="180" access="10"/>
+        <query name="clan" access="10">
+            <variable name="clan_id" type="none"/>
+        </query>
+    </section>
+</queryRoot>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panelRoot SYSTEM "../../engine/dtd/panelRoot.dtd">
+<panelRoot>
+	<!-- Set announce in the game -->
+    <panel name="setAnnouncement" panelType="panel" h="Send\nAnnounce">
+        <onClick>
+            doQuery('server.action.setAnnouncement',vars);
+        </onClick>
+        <fields>
+            <text name="announce" maxlength="300" size="86" h="Announcement text"/>
+            <button name="button" h="Send"/>
+        </fields>
+    </panel>
+</panelRoot>

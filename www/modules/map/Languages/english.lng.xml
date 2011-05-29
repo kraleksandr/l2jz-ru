@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languageRoot SYSTEM "../../../engine/dtd/languageRoot.dtd">
+<languageRoot>
+	<h name="page.map">
+		<h name="linkName" value="@@CDATA@@"><![CDATA[<img src="i/locate.gif" width="14" border="0">]]></h>
+		<h name="mainMenu" value="Map"/>
+		<h name="chars_online.linkName" value="Chars Online"/>
+	</h>
+	<h name="query.map">
+		<h name="chars_online">
+			<h name="empty" value="No chars online."/>
+		</h>
+	</h>
+</languageRoot>

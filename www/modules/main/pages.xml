@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pageRoot SYSTEM "../../engine/dtd/pageRoot.dtd">
+<pageRoot>
+	<!-- INFO -->
+    <section name="info">
+        <page name="welcome">
+            doQuery('info.welcome',vars);
+            html.setSection('mainSection',r);
+        </page>
+        <page name="register_user">
+            html.pnl('registerUser',null,'mainSection');
+        </page>
+        <page name="forgot_password">
+            html.pnl('getPassByMail',null,'mainSection');
+        </page>
+    </section> 
+	
+	<!-- CHARS -->
+	<section name="chars">
+		<page name="search" arguments="id">
+			doQuery('chars.search',vars);
+			if((l2jz.qCount!=1)||(!l2jz.queryAccess('char.main'))){
+				new l2jzTable('char.main');
+			} else {
+				doLoad('char.main.'+r[0].char_id);
+			}
+		</page>
+		<page name="builders">
+			doQuery('chars.builders',vars);
+			new l2jzTable('char.main');
+		</page>
+		<page name="online">
+			doQuery('chars.online',vars);
+			new l2jzTable('char.main');
+		</page>
+		<page name="top100">
+			doQuery('chars.top100',vars);
+			new l2jzTable('char.top100');
+		</page>
+		<page name="top100adena">
+			doQuery('chars.top100adena',vars);
+			new l2jzTable('char.main');
+		</page>
+	</section>
+		
+	<!-- ACCOUNTS -->
+	<section name="accounts">
+		<page name="search" arguments="id">
+			doQuery('accounts.search',vars);
+			if((l2jz.qCount!=1)||(!l2jz.queryAccess('account.main'))){
+				new l2jzTable('char.main');
+			} else {
+				doLoad('char.main.'+r[0].char_id);
+			}
+		</page>
+		<page name="all">
+			doQuery('accounts.all',vars);
+			new l2jzTable('account.main');
+		</page>
+		<page name="builders">
+			doQuery('accounts.builders',vars);
+			new l2jzTable('account.main');
+		</page>
+	</section>
+		
+	<!-- CLANS -->
+	<section name="clans">
+		<page name="search" arguments="id">
+			doQuery('clans.search',vars);
+			if((l2jz.qCount!=1)||(!l2jz.queryAccess('clans.search'))){
+				new l2jzTable('clan.main');
+			} else {
+				doLoad('clan.main.'+r[0].clan_id);
+			}
+		</page>
+		<page name="all_clans">
+			doQuery('clans.all_clans',vars);
+			new l2jzTable('clan.main');
+		</page>
+	</section>
+	
+	<!-- ITEMS -->
+	<section name="items">
+		<page name="search" arguments="id">
+			doQuery('items.search',vars);
+			new l2jzTable('items.byGtype');
+		</page>
+		<page name="type" arguments="id">
+			doQuery('items.type',vars);
+			switch(vars.id){	
+				case'chest':case'legs':case'fullbody':case"sword":case"blunt":case"pet_weapon":case"pet_armor":
+					new l2jzTable('items.byType');
+				break;
+				default:
+					new l2jzTable('items.main');
+			}
+		</page>
+		<page name="recipe" arguments="id">
+			doQuery('items.recipe',vars);
+			new l2jzTable('items.main');
+		</page>
+		<page name="sets" arguments="id">
+			doQuery('items.sets',vars);
+			new l2jzTable('items.sets');
+		</page>
+		<page name="luxor">
+			doQuery('items.luxor',vars);
+			new l2jzTable('items.luxor');
+		</page>
+	</section>
+		
+	<!-- MONSTERS -->
+	<section name="monsters">
+		<page name="search" arguments="id">
+			doQuery('monsters.search',vars);
+			new l2jzTable('monster.type');
+		</page>
+		<page name="type" arguments="id">
+			doQuery('monsters.type',vars);
+			new l2jzTable('monster.type');
+		</page>
+	</section>
+		
+	<!-- TOP MENU -->
+	<section name="top_menu" frame="top_menu">
+		<page name="chars">
+			html.t('main.topMenu.chars',null,'topMenuSection');
+		</page>
+		<page name="accounts">
+			html.t('main.topMenu.accounts',null,'topMenuSection');
+		</page>
+		<page name="items" arguments="id">
+			if(!l2jz.cmpFPage('@back.@back')){
+				html.aTabs('item_tab_menu',vars.id,'topMenuSection');
+			}
+		</page>
+		<page name="monsters">
+			html.t('main.topMenu.monsters',null,'topMenuSection');
+		</page>
+	</section>
+	
+	<!-- JUMP -->
+	<page name="jump" frame="anchor_jump" arguments="id">
+		if(vars.id!='pageTop'){
+			html.jumpTo(vars.id);
+		} else {
+			html.jumpTo();
+		}
+	</page>
+</pageRoot>

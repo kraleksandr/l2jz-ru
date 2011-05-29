@@ -1,0 +1,55 @@
+<table border="0" cellpadding="3" cellspacing="0" width="600" class="entityTable">
+	<tr class="headTr">
+			<td rowspan="11"><img src="modules/drop/i/mobs/@:a.icon:@.jpg"/></td>
+			<td colspan="3" rowspan="2" width="250" class="bodyTr">
+				@:a.fHTML.map_flag:@@:a.fHTML.mob_id:@<span class="entityName">@:a.name:@</span><br>
+				<font size="-2">@:a.type:@</font><br>
+				@:a.fHTML.isUndead:@
+			</td>
+			<td>@:a.fName.level:@</td>
+		</tr><tr class="bodyTr">
+			<td>@:a.level:@</td>
+		</tr><tr class="headTr">
+			<td>@:a.fName.sp:@</td>
+			<td>@:a.fName.exp:@</td>
+			<td>@:a.fName.sex:@</td>
+			<td>@:a.fName.aggro:@</td>
+		</tr><tr class="bodyTr">
+			<td>@:a.fHTML.sp:@</td>
+			<td>@:a.fHTML.exp:@</td>
+			<td>@:a.fHTML.sex:@</td>
+			<td>@:a.fHTML.aggro:@</td>
+		</tr><tr class="headTr">
+			<td>@:a.fName.hp:@</td>
+			<td>@:a.fName.p_m_atk:@</td>
+			<td>@:a.fName.p_m_def:@</td>
+			<td>@:a.fName.attackrange:@</td>
+		</tr><tr class="bodyTr">
+			<td>@:a.hp:@/@:a.mp:@</td>
+			<td>@:a.patk:@/@:a.matk:@</td>
+			<td>@:a.pdef:@/@:a.mdef:@</td>
+			<td>@:a.attackrange:@</td>
+		</tr><tr class="headTr">
+			<td colspan="2">@:a.fName.p_m_spd:@</td>
+			<td colspan="2">@:a.fName.p_m_walkrun:@</td>
+		</tr><tr class="bodyTr">
+			<td colspan="2">@:a.atkspd:@/@:a.matkspd:@</td>
+			<td colspan="2">@:a.walkspd:@/@:a.runspd:@</td>
+		</tr><tr class="headTr">
+			<td colspan="4">@:html.h('table.monster.r_l_hand'):@</td>
+		</tr><tr class="bodyTr">
+			<td colspan="4">
+				@:(a.rhand>0)?html.a('item.main.'+a.rhand,a.ritem_name):'Empty':@/
+				@:(a.lhand>0)?html.a('item.main.'+a.lhand,a.litem_name):'Empty':@
+			</td>
+		</tr><tr class="bodyTr" valign="bottom">
+			<td colspan="11">
+				<div class="sectionsPanel">
+					&nbsp;Sections:&nbsp;
+					@:html.a2('monster.main.'+a.mob_id):@ <font size="-1">-</font> 
+					@:html.a2('monster.skills.'+a.mob_id):@
+					@:(a.boss_id>0)?' <font size="-1">-</font>'+html.a2('monster.minions.'+a.mob_id):'':@ 
+				</div>
+			</td>
+		</tr>
+	</table>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pageRoot SYSTEM "../../engine/dtd/pageRoot.dtd">
+<pageRoot>
+    <!-- SEVEN SIGNS-->
+    <section name="sevensigns">
+        <page name="main">
+            doQuery('sevensigns.main',vars);
+			html.t('sevensigns',sT['sevensigns.main'],'mainSection');
+        </page>		
+    </section>
+</pageRoot>

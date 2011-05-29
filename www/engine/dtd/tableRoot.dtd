@@ -1,0 +1,120 @@
+<!--
+    Табличные данные это массив элементами которого являются ассоциативные мас-
+    сивы с одинаковым набором элементов. Самый распостранённый способ генерации
+    табличных данных это вызов $sql->saveRows('sql_запрос') на сервере. Всё это
+    происходит примерно следующим образом:
+    1) Пользователь запрашивает какие-нибудь табличные данные(например он хочет
+       посмотреть top100 игроков).
+    2) Клиент запрашивает у сервера данные.
+    3) На сервере запускается обработчик запроса, который обращается к базе дан-
+       ных и возвращает клиенту табличные данные.
+       см. handlers/default/chars/top100.php
+    4) В клиентском обработчике запроса вызывается функция отрисовке таблицы. Этой
+       функции передаётся ссылка на загруженные данные и имя способа их отображения.
+    В этом документе как раз и описаны все способы отображения таблиц.
+    
+    Собственно способы отображения задаются тэгами <table> но для удобства они предс-
+    тавлены в виде иерархической структуру из тэгов <section>. Для <section> можно за-
+    давать те-же атрибуты что и для <table>. Если для <section> задан какой-то атрибут,
+    он применяется ко всем <table> внутри этого <section>. Более глубокие определения
+    атрибута перекрывают менее глубокие.
+    
+<table>
+    АТТРИБУТЫ:
+        tableType
+           Задаёт тип таблицы. В зависимости от типа для элементов таблицы с одинаковыми
+           именами будут применяться различные обработчики.
+        width
+            Ширина таблицы. Напрямую соответсвует атрибуту width HTML тэга table.
+        showType
+            Способ отображения таблицы. По умолчанию используется simple.
+            simple - 
+                все полученные данные формируются в одну таблицу и сразу выводятся
+            jumps - 
+                Все данные разделяются на несколько таблиц по значению некоторого столбца
+                (указывается в атрибуте separator). Все полученные таблицы сразу-же выводятся
+                Между таблицами вставляются панельки для быстрого перепрыгивания от одной таблицы
+                к другой.
+            tabs -
+              Все данные разделяются на несколько таблиц по значению некоторого столбца
+              (указывается в атрибуте separator). После этого выводится tab меню, закладками кото-
+              рого являются полученные таблицы.
+         separator -
+             Задаёт разделяющую колонку
+         defaultTab -
+             Задаёт изначально открытый таб.
+    ТЭГИ
+        columns 
+            Задаёт всё множество столбцов таблицы. Может включать в себя следующие тэги:
+            column - задаёт колонку. Может иметь следующие атрибуты:
+                name(обязательный атрибут)
+                    Имя колонки. По паре tableType column.name система определяет, как она
+                    называется, какой обработчик будет формировать её элементы, какие к этим
+                    элементам будут применяться стили и.т.д.
+                access
+                    Уровень доступа к колонке. Если у пользователя недостаточный уровень доступа,
+                    колонка не будет отображаться.
+                queryLink
+                    Связывает колонку с запросом. При этом колонка получает тот-же уровень доступа
+                    что и запрос.
+            incomeColumns - задаёт множество колонок а именно все колонки которые входят в табличные
+                    данные по которым будет генерироваться таблицы. Все колонки получают access = 0.
+    
+-->
+<!ELEMENT tableRoot (section|table)+>
+<!ATTLIST tableRoot
+    width     CDATA #IMPLIED
+>
+	
+<!ELEMENT section (section|table)+>
+<!ATTLIST section
+   	name      CDATA #REQUIRED
+   	width     CDATA #IMPLIED
+   	tableType CDATA #IMPLIED
+>
+
+<!ELEMENT table ((entityTable|rowTable)|(tabFilter|jumpTables|inlineTables|showAll)+)>
+<!ATTLIST table
+   	name      CDATA #REQUIRED
+   	width     CDATA #IMPLIED
+	class     CDATA #IMPLIED
+   	tableType CDATA #IMPLIED
+>
+
+<!ELEMENT tabFilter (column|incomeColumns)*>
+<!ATTLIST tabFilter 
+    groupBy       CDATA #REQUIRED
+    name          CDATA #IMPLIED
+    default       (TRUE) #IMPLIED
+>
+
+<!ELEMENT jumpTables (column|incomeColumns)*>
+<!ATTLIST jumpTables 
+    groupBy       CDATA #REQUIRED
+    name          CDATA #IMPLIED
+    default       (TRUE) #IMPLIED
+>
+
+<!ELEMENT inlineTables (column|incomeColumns)*>
+<!ATTLIST inlineTables 
+    groupBy       CDATA #REQUIRED
+    name          CDATA #IMPLIED
+    default       (TRUE) #IMPLIED
+>
+
+<!ELEMENT showAll (column|incomeColumns)*>
+<!ATTLIST showAll 
+    default       (TRUE) #IMPLIED
+>
+
+<!ELEMENT entityTable (column|incomeColumns)*>
+
+<!ELEMENT rowTable (column|incomeColumns)*>
+
+<!ELEMENT column EMPTY>
+<!ATTLIST column
+   	name      CDATA #REQUIRED
+   	access    CDATA #IMPLIED
+>
+	
+<!ELEMENT incomeColumns EMPTY>

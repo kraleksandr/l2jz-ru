@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panelRoot SYSTEM "../../engine/dtd/panelRoot.dtd">
+<panelRoot>
+    <section name="recipe">
+        <panel name="calculate" panelType="button">
+            <onAny>recipe.calculate(vars);</onAny>
+            <fields>
+                <hidden name="recipe_id"/>
+            </fields>
+        </panel>
+        <panel name="field" hasButton="FALSE" onChangeT="0" panelType="lpanel">
+            <onChange>recipe.change_component(vars);</onChange>
+            <fields>
+                <hidden name="item_id"/>
+                <text name="price" maxlength="15" size="8"/>
+            </fields>
+        </panel>
+    </section>
+</panelRoot>

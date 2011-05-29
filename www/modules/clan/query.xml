@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE queryRoot SYSTEM "../../engine/dtd/queryRoot.dtd">
+<queryRoot>
+    <!-- CLAN -->
+    <section name="clan" sAccess="myClan">
+        <variable name="clan_id" type="none"/>
+        <query name="main" cache="3600"/>
+        <query name="warehouse" access="30"/>
+        <query name="chars" cache="3600"/>
+    </section>   
+</queryRoot>

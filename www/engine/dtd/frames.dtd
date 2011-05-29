@@ -1,0 +1,27 @@
+<!--
+<frame>
+	АТТРИБУТЫ:
+		name
+				Обязательный аргумент. Имя фрейма.
+		history
+				Обязательный аргумент. Определяет, добавлять изменения состояния фрейма в историю работы
+				системы или нет.
+		addToUrl
+				Обязательный аргумент. Определяет, добавлять состояние фрейма в адресную строку или нет.
+	ТЭГИ:
+		<handler>
+				Обработчик фрейма. 
+
+
+-->
+<!ELEMENT frames ((frame)+)>
+
+<!ELEMENT frame (handler?)>
+<!ATTLIST frame
+	name      CDATA #REQUIRED
+	arguments CDATA #IMPLIED
+	history  (TRUE|FALSE) #REQUIRED
+	addToUrl (TRUE|FALSE) #REQUIRED
+>
+
+<!ELEMENT handler (#PCDATA)>

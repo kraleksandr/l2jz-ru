@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pageRoot SYSTEM "../../engine/dtd/pageRoot.dtd">
+<pageRoot>
+    <section name="map" frame="map">
+        <page name="char" arguments="char_id">
+			map.show();
+			doQuery('map.char',vars);
+			map.sh_points('char');
+		</page>
+        <page name="monster" arguments="id">
+			map.show();
+			doQuery('map.monster',vars);
+			map.sh_points('mob');
+		</page>
+		 <page name="item" arguments="id">
+			map.show();
+			doQuery('map.item',vars);
+			map.sh_points('drop');
+		</page>
+        <page name="chars_online">
+			map.show();
+			doQuery('map.chars_online',vars);
+			map.sh_points('char');
+		</page>
+        <page name="clan" arguments="clan_id">
+			map.show();
+			doQuery('map.clan',vars);
+			map.sh_points('char');
+		</page>
+        <page name="hide">
+            map.hide();
+        </page>
+    </section>
+</pageRoot>

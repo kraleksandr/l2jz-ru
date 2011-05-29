@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languageRoot SYSTEM "../../../engine/dtd/languageRoot.dtd">
+<languageRoot>
+	<h name="page">
+		<h name="castles">
+            <h name="table">
+				<h name="linkName" value="Castles"/>
+				<h name="tooltip" value="Here you can see information about castles."/>
+			</h>
+			<h name="map.linkName" value="Siege Map"/>
+        </h>
+	</h>
+    <h name="table">
+        <h name="castle">
+            <h name="taxPercent" value="Tax Rate"/>
+            <h name="siegeDate" value="Next Siege Date"/>
+            <h name="owner_id" value="Owner"/>
+            <h name="attackers" value="Attackers"/>
+            <h name="defenders" value="Defenders"/>
+        </h>
+    </h>
+</languageRoot>

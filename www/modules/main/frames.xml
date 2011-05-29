@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frames SYSTEM "../engine/dtd/frames.dtd">
+<frames>
+	<frame name="main" history="TRUE" addToUrl="TRUE">
+		<handler>
+			if(!l2jz.cmpFPage('@back')){
+				html.clearSection('mainSection');
+				html.clearSection('panelSection');
+				html.clearSection('infoSection');
+			}
+			menu.showAddress(query);
+			var pageTitle = html.h2('page.'+pName+'.pageTitle');
+			if(pageTitle!='pageTitle'){
+				html.setSection(
+					'pageTitleSection',
+					html.tSys(
+						pageTitle,
+						{
+							'vars':     vars,
+							'pName':    pName,
+							'linkName': html.h2('page.'+query+'.linkName')
+						}
+					)
+				);
+			} else html.clearSection('pageTitleSection');
+		</handler>
+	</frame>
+	
+	<frame name="top_menu"  history="FALSE" addToUrl="TRUE"/>
+	
+	<frame name="map" history="TRUE" addToUrl="TRUE"/>	
+	
+	<frame name="quickAsk" history="FALSE" addToUrl="FALSE"/>
+	
+	<frame name="noFrame" history="FALSE" addToUrl="FALSE"/>
+	
+	<!-- Этот фрейм нужен чтобы эмулировать якоря -->
+	<frame name="anchor_jump" history="FALSE" addToUrl="TRUE"/>
+</frames>

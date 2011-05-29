@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languageRoot SYSTEM "../../../engine/dtd/languageRoot.dtd">
+<languageRoot>
+    <h name="page.account">
+        <h name="main.linkName" value="Главная панель"/>
+    </h>
+    <h name="query">
+        <h name="account">
+            <h name="chars">
+                <h name="empty" value="Нет чаров на этом акаунте."/>
+            </h>
+            <h name="action">
+                <h name="moveCharToAccount">
+                    <h name="ok" value="Персонаж был перенесен на другой акаунт."/>
+                    <h name="error:fullAccount" value="Этот акаунт уже полон."/>
+                    <h name="error:noSuchChar" value="Персонаж с таким именем не найден."/>
+                </h>
+                <h name="changePass">
+                    <h name="ok" value="Пароль был изменен."/>
+                </h>
+                <h name="changeMyPass">
+                    <h name="ok" value="Пароль был изменен."/>
+                    <h name="error:wrongLoginOrPass" value="Неправильный логин или пароль."/>
+                </h>
+                <h name="changeAccess">
+                    <h name="ok" value="Уровень доступа был изменен."/>
+                </h>
+                <h name="changeEmail">
+                    <h name="ok" value="Email был изменен."/>
+                </h>
+                <h name="ban">
+                    <h name="ok" value="Акаунт забанен."/>
+                </h>
+                <h name="unban">
+                    <h name="ok" value="Акаунт разбанен."/>
+                </h>
+            </h>
+        </h>
+    </h>
+    <h name="panel.account">
+        <h name="changePass" value="Установить\nПароль">
+            <h name="newPass" value="Пароль"/>
+            <h name="equalError" value="Введенные пароли не совпадают."/>
+        </h>
+        <h name="changeMyPass" value="Смена\nпароля">
+            <h name="pass" value="Старый пароль"/>
+            <h name="newPass" value="Новый пароль"/>
+            <h name="newPassAgain" value="Подтвердить пароль"/>
+            <h name="button" value="Изменить"/>
+            <h name="equalError" value="Введенные пароли не совпадают."/>
+        </h>
+        <h name="changeAccess" value="Установить\nBuilder"/>
+        <h name="changeEmail" value="Изменить\nEmail">
+            <h name="email" value="Email"/>
+            <h name="button" value="Изменить"/>
+        </h>
+        <h name="moveCharToAccount" value="Перенести персонажа\nна этот акаунт">
+            <h name="char_name" value="Имя персонажа"/>
+            <h name="login" value="Акаунт"/>
+            <h name="button" value="Переместить"/>
+        </h>
+        <h name="ban">
+            <h name="button" value="Бан"/>
+        </h>
+        <h name="unban">
+            <h name="button" value="Разбанить"/>
+        </h>
+    </h>
+</languageRoot>

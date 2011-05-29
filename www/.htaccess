@@ -1,0 +1,8 @@
+RewriteEngine off
+
+#AuthName "Admin zone"
+#AuthType Basic
+#AuthUserFile /var/www/la2.balancer.ru/htdocs/z/.pwd
+#require valid-user
+
+#register_long_arrays = On

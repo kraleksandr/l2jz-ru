@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languageRoot SYSTEM "../../../engine/dtd/languageRoot.dtd">
+<languageRoot>
+    <h name="page.account">
+        <h name="main.linkName" value="Main"/>
+    </h>
+    <h name="query">
+        <h name="account">
+            <h name="chars">
+                <h name="empty" value="There are no chars on this account."/>
+            </h>
+            <h name="action">
+                <h name="moveCharToAccount">
+                    <h name="ok" value="Char was succesfully moved to another account."/>
+                    <h name="error:fullAccount" value="There are allready seven chars on this account."/>
+                    <h name="error:noSuchChar" value="There is no char with such name."/>
+                </h>
+                <h name="changePass">
+                    <h name="ok" value="Password was successfully changed."/>
+                </h>
+                <h name="changeMyPass">
+                    <h name="ok" value="Password was successfully changed."/>
+                    <h name="error:wrongLoginOrPass" value="Incorrect login or password."/>
+                </h>
+                <h name="changeAccess">
+                    <h name="ok" value="Access level was successfully changed."/>
+                </h>
+                <h name="changeEmail">
+                    <h name="ok" value="Email was successfully changed."/>
+                </h>
+                <h name="ban">
+                    <h name="ok" value="Account was succesfully banned."/>
+                </h>
+                <h name="unban">
+                    <h name="ok" value="Account was succesfully unbanned."/>
+                </h>
+            </h>
+        </h>
+    </h>
+    <h name="panel.account">
+        <h name="changePass" value="Set\nPassword">
+            <h name="newPass" value="Password"/>
+            <h name="equalError" value="The entered passes are not identical."/>
+        </h>
+        <h name="changeMyPass" value="Change\nPassword">
+            <h name="pass" value="Old Password"/>
+            <h name="newPass" value="New Pass"/>
+            <h name="newPassAgain" value="New Pass again"/>
+            <h name="button" value="Change"/>
+            <h name="equalError" value="The entered passes are not identical."/>
+        </h>
+        <h name="changeAccess" value="Set\nBuilder"/>
+        <h name="changeEmail" value="Change\nEmail">
+            <h name="email" value="Email Address"/>
+            <h name="button" value="Change"/>
+        </h>
+        <h name="moveCharToAccount" value="Move char to\nThis Account">
+            <h name="char_name" value="Char name"/>
+            <h name="login" value="Account"/>
+            <h name="button" value="Move"/>
+        </h>
+        <h name="ban">
+            <h name="button" value="Ban"/>
+        </h>
+        <h name="unban">
+            <h name="button" value="Unban"/>
+        </h>
+    </h>
+</languageRoot>

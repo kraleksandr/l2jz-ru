@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pageRoot SYSTEM "../../engine/dtd/pageRoot.dtd">
+<pageRoot>
+    <!-- CHAR -->
+    <section name="char" arguments="char_id">
+        <startHandler if="!l2jz.cmpFPage('@back.@any.@back')">
+			doQuery('char.main',vars);
+			new l2jzTable('char.entity',{tplName:'char',div:'mainSection'});
+        </startHandler>
+        <page name="main">
+            html.clearSection('infoSection');
+        </page>
+        <page name="inventory">
+            doQuery('char.inventory',vars);
+            new l2jzTable('items.inventory');
+        </page>
+        <page name="skills">
+            doQuery('char.skills',vars);
+            new l2jzTable('skill.char');
+        </page>
+        <page name="recipebook">
+            doQuery('char.recipebook',vars);
+            new l2jzTable('char.main');
+        </page>
+        <page name="friends">
+            doQuery('char.friends',vars);
+            new l2jzTable('char.main');
+        </page>
+    </section>
+</pageRoot>

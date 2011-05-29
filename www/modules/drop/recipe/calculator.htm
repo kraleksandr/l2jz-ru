@@ -1,0 +1,23 @@
+<table border="0" cellpadding="1" cellspacing="0" width="350">
+	<tr>
+		<td>
+			<table class="block" border="0" cellpadding="5" cellspacing="1" width="100%">
+				<tr>
+					<td nowrap="nowrap" align="center"><b>@:html.h('table.recipe.calculator_name'):@</b></td>
+				</tr>
+			</table>
+		</td>
+	</tr><tr>
+		<td><div id="@:a.recipe_id:@_calculator_body"></div></td>
+	</tr><tr>
+		<td>
+			<table class="sectionsPanel" cellpadding="4" cellspacing="1" width="100%">
+				<tr>
+					<td><b>@:html.h('table.recipe.total'):@:&nbsp;</b></td>
+					<td id="@:a.recipe_id:@_calculator_result">&nbsp;</td>
+					<td align="right" width="100%">@:html.pnl('recipe.calculate',a):@</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>

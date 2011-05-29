@@ -1,0 +1,18 @@
+<table cellpadding="3" cellspacing="0" width="600" class="entityTable">
+	<tr>
+		<td colspan="3">@:(new l2jzTable('items.oneItem',{div:'innerHTML'})).innerHTML:@</td>
+	</tr><tr>
+		<td>
+			<div class="sectionsPanel">
+				&nbsp;Sections:&nbsp;
+				@:html.a2('item.main.'+a.item_id):@ <font size="-1">-</font>
+				@:((a.rcp_flag>0)||(a.type=='recipe'))?html.a2('item.recipe.'+a.item_id)+' <font size="-1">-</font>':'':@
+				@:(a.sll_flag>0)?html.a2('item.sell.'+a.item_id)+' <font size="-1">-</font>':'':@
+				@:(a.drp_flag>0)?html.a2('item.drop.'+a.item_id)+' <font size="-1">-</font>':'':@
+				@:html.a2('item.owners.'+a.item_id):@
+				&nbsp;<font size="-2">@:html.h('table.items.world_count'):@:&nbsp;</font>@:(a.world_count>0)?a.world_count:'0':@&nbsp;<font size="-2">@:html.h('table.items.owners'):@:&nbsp;</font>@:(a.owners)?a.owners:'-':@
+				@:html.a('map.item.'+a.item_id,html.h('etc.mapStatus.loc')):@
+			</div>
+		</td>
+	</tr>
+</table>

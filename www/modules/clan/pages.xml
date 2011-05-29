@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pageRoot SYSTEM "../../engine/dtd/pageRoot.dtd">
+<pageRoot>
+    <!-- CLAN -->
+    <section name="clan" arguments="clan_id">
+        <startHandler if="!l2jz.cmpFPage('@back.@any.@back')">
+            doQuery('clan.main',vars);
+			new l2jzTable('clan.entity',{tplName:'clan',div:'mainSection'});
+            doQuery('clan.chars',vars);
+            new l2jzTable('char.main');
+        </startHandler>
+        <page name="main">
+            doQuery('clan.chars',vars);
+        </page>
+        <page name="warehouse">
+            doQuery('clan.warehouse',vars);
+            new l2jzTable('items.inventory');
+        </page>
+    </section>
+</pageRoot>
