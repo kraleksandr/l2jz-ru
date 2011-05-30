@@ -3,7 +3,7 @@ $cfg = array(
 	#-----------------------------------------------------
 	# L2JZ Configuration
 	#-----------------------------------------------------
-	'l2jzHomeDir'     => '/var/www/la2.balancer.ru/l2jz/www',
+	'l2jzHomeDir'     => 'D:\l2jz\www',
 	'cache'           => TRUE,
 	'GZip'            => FALSE,
 	'baseLanguage'    => 'english',                       //No need to change it!
@@ -37,10 +37,10 @@ $cfg = array(
 		array(
 			'ip'             => '127.0.0.1',              //Server IP.
 			'port'           => '1902',                   //Server login port.
-			'mysql_address'  => 'localhost',              //Sql server address.
-			'mysql_login'    => 'la2',                   //Sql login username.
-			'mysql_password' => 'la2kkk',                       //Sql login password.
-			'mysql_database' => 'l2jdb',                //Sql database name.
+			'mysql_address'  => '192.168.0.100',              //Sql server address.
+			'mysql_login'    => 'root',                   //Sql login username.
+			'mysql_password' => '',                       //Sql login password.
+			'mysql_database' => 'srv',                //Sql database name.
 			'LnameTemplate'  => '[A-Za-z0-9]{2,}',        // This is login name template.
 			'CnameTemplate'  => '[A-Za-z0-9]{2,}',        // This is char nametemplate.
 		),
@@ -56,13 +56,13 @@ $cfg = array(
 			'port'           => '7777',                   //Server game port.
 			'telnetport'     => '1903',                  //Server telnet port. Don't forget to turn on telnet!
 			'telnetpass'     => 'la2kkk',               //Server telnet pass. Do not forget to uncomment the string with it in telnet.propereties.
-			'mysql_address'  => 'localhost',              //Sql server address.
-			'mysql_login'    => 'la2',                   //Sql login username.
-			'mysql_password' => 'la2kkk',                       //Sql login password.
-			'mysql_database' => 'l2jdb',                //Sql database name.
+			'mysql_address'  => '192.168.0.100',              //Sql server address.
+			'mysql_login'    => 'root',                   //Sql login username.
+			'mysql_password' => '',                       //Sql login password.
+			'mysql_database' => 'srv',                //Sql database name.
 			//public info
 			'info' => array(
-				'name'          => 'LBR Main Server',          //Server name. It will be shown in client(in many places). You may write here whatever you want.
+				'name'          => 'TEST Server',          //Server name. It will be shown in client(in many places). You may write here whatever you want.
 				'rateXp'        => 20,                     //Exp rate.
 				'rateSp'        => 20,                     //Sp rate.
 				'rateDropAdena' => 30,                     //Adena rate.
@@ -71,7 +71,7 @@ $cfg = array(
 			),
 		),
 		#server end
-		
+		/*
 		#server begin
 		array(
 			//private info
@@ -92,7 +92,7 @@ $cfg = array(
 				'rateDropItems' => 800,                     //Drop rate.
 				'rateDropSpoil' => 900,                     //Spoil rate.
 			),
-		),
+		), */
 		#server end
 	),
 );
