@@ -11,7 +11,7 @@ $cfg = array(
 	 * default - L2J Server
 	 * l2j_ft  - L2J Fortress Server
 	 */
-	'workMode'        => 'l2j_ft',
+	'workMode'        => 'default',
 	'workModes'       => array(
 		              	'default' => 'default',
 		              	'l2j_ft'  => 'l2j_ft',
