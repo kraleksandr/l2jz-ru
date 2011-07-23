@@ -3,9 +3,9 @@ $cfg = array(
 	#-----------------------------------------------------
 	# L2JZ Configuration
 	#-----------------------------------------------------
-	'l2jzHomeDir'     => 'D:\l2jz\www',
+	'l2jzHomeDir'     => $_SERVER['DOCUMENT_ROOT'].$_SERVER['REQUEST_URI'],
 	'cache'           => TRUE,
-	'GZip'            => FALSE,
+	'GZip'            => TRUE,
 	'baseLanguage'    => 'english',                       //No need to change it!
 	/**
 	 * default - L2J Server

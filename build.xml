@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project name="l2jz" default="build" basedir=".">
+
+	<property name="build" location="build"/>
+
+	<target name="build">
+		<mkdir dir="${build}"/>
+		<copy todir="${build}">
+		<fileset dir="">
+			<include name="**/*.*"/>
+			<exclude name="ant*.bat" />
+			<exclude name="build.xml" />
+		</fileset>
+		</copy>
+		<zip destfile="${build}/l2jz.zip" basedir="${build}" />
+	</target>
+
+	<target name="clean" description="Remove the output directories">
+		<delete dir="build"/>
+	</target>
+
+</project>
